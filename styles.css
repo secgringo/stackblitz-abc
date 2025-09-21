@@ -1,0 +1,183 @@
+/* -------------------------------
+    COLOR STYLES CONFIGS
+  ________________________________ */
+
+  :ROOT {
+    --brisk-blue: #17253F;
+    --intesnisty-indigo: #2343BD;
+    --aqual-pulse: #91B9D2;
+    --lime-lift: #DEF479;
+    --endurance-white: #FCFCFC;
+    --detritus-green: #00231C;
+
+  /* Assign the roles */
+  --primary-color: var(--brisk-blue);
+  --secondary-color: var(--intensity-indigo);
+  --accent-color: var(--lime-lift);
+  --background-color: var(--indurance-white);
+  --text-color: var(--detritus-green);
+  }
+
+
+  /* _____________________________
+      TYPOGRAPHY USE 
+    ______________________________
+  /* Import Google fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap'); /* Fall back to system if font is missing
+
+/* Title Large → h1 */
+h1 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 30px;
+  color: var(--text-color);
+  margin-bottom: 15px;
+}
+
+/* Title → h2 */
+h2 {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 25px;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+/* Subtitle → h3 */
+h3 {
+  font-family: 'Comfortaa', cursive;
+  font-weight: 400;
+  font-size: 15px;
+  color: var(--secondary-color);
+  margin-bottom: 8px;
+}
+
+/* Body Large → paragraph inside main sections */
+p {
+  font-family: Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: var(--text-color);
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* Body Strong → <strong> or <b> */
+strong, b {
+  font-family: Calibri, sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* Body (normal text spans, list items, form labels) */
+span, li, label, input, textarea {
+  font-family: Calibri, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--text-color);
+}
+
+/* Captions → small text */
+small {
+  font-family: Arial, sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  color: var(--secondary-color);
+}
+
+/* Link formating */
+
+
+/* ______________________________
+    GLOBAL STYLES
+  _______________________________
+
+body {
+  font-family: Calibri, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: var(--primary-color);
+  color: var(--endurance-white);
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header img.logo { height: 50px; }
+nav ul { list-style: none; display: flex; gap: 15px; }
+nav a { color: var(--endurance-white); text-decoration: none; font-weight: bold; }
+nav a:hover { color: var(--accent-color); }
+
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: var(--detritus-green);
+  padding: 20px;
+  margin-top: 30px;
+}
+footer form { display: flex; gap: 10px; margin-top: 10px; }
+footer input[type="email"] { padding: 5px; flex: 1; border: 1px solid var(--aqua-pulse); }
+footer button { padding: 5px 10px; background: var(--accent-color); border: none; cursor: pointer; color: var(--text-color); }
+footer .social a { margin-right: 10px; color: var(--detritus-green); text-decoration: none; }
+
+/* Sections */
+section { padding: 30px; }
+
+/* Cards */
+.card {
+  border: 1px solid var(--aqua-pulse);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background: var(--endurance-white);
+}
+.card img { max-width: 100%; height: auto; }
+
+/* Buttons */
+button {
+  background: var(--lime-lift);
+  color: var(--detritus-green);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Calibri, sans-serif;
+  font-size: 16px;
+}
+button:hover { background: var(--accent-color); }
+
+
+/* Tables */
+table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+table th, table td { border: 1px solid var(--aqua-pulse); padding: 10px; text-align: center; }
+
+
+/* ---------------------------
+Color Style Utility
+______________________________ */
+
+.bg-aqua { background-color: var(--aqua-pulse); color: var(--text-color);}
+.bg-lime { background-color: var(--lime-lift); color: var(--text-color);}
+.bg-white { background-color: var(--endurance-white); color: var(--text-color);}
+
+section.bg-aqua h1, section.bg-aqua h2, section.bg-aqua h3,
+section.bg-lime h1, section.bg-lime h2, section.bg-lime h3 {
+  color: var(--primary-color); /* Contrast for headings on light backgrounds */
+}
+
+
+/* Card variations */
+.card.aqua { background: var(--aqua-pulse); border-color: var(--secondary-color); }
+.card.lime { background: var(--lime-lift); border-color: var(--secondary-color); }
+.card.white { background: var(--endurance-white); border-color: var(--aqua-pulse); }
+
