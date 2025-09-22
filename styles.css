@@ -183,7 +183,9 @@ section { padding: 30px; }
 .card img { max-width: 100%; height: auto; }
 
 /* Global Button Styles */
-button {
+button,
+input[type="submit"],
+input[type="button"] {
   background-color: #17253F; /* Brisk Blue */
   color: #FCFCFC;            /* Endurance White */
   border: none;
@@ -196,7 +198,9 @@ button {
 }
 
 /* Hover effect */
-button:hover {
+button:hover,
+input[type="submit"]:hover,
+input[type="button":hover {
   background-color: #2343BD; /* Intensity Indigo */
 }
 
