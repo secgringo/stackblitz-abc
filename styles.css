@@ -195,6 +195,25 @@ button {
 }
 button:hover { background: var(--accent-color); }
 
+/* General Form Buttons */
+form button {
+  background-color: #2343BD; /* Intensity Indigo */
+  color: #FCFCFC;           /* Endurance White */
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/* Hover effect */
+form button:hover {
+  background-color: #17253A; /* Brisk Blue */
+}
+
+
 
 /* Tables */
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
