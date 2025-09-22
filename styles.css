@@ -182,23 +182,10 @@ section { padding: 30px; }
 }
 .card img { max-width: 100%; height: auto; }
 
-/* Buttons */
+/* Global Button Styles */
 button {
-  background: var(--lime-lift);
-  color: var(--detritus-green);
-  border: 2px solid #00231C;
-  padding: 8px 12px;
-  cursor: pointer;
-  border-radius: 4px;
-  font-family: Calibri, sans-serif;
-  font-size: 16px;
-}
-button:hover { background: var(--accent-color); }
-
-/* General Form Buttons */
-form button {
   background-color: #2343BD; /* Intensity Indigo */
-  color: #FCFCFC;           /* Endurance White */
+  color: #FCFCFC;            /* Endurance White */
   border: none;
   padding: 10px 18px;
   border-radius: 6px;
@@ -209,10 +196,9 @@ form button {
 }
 
 /* Hover effect */
-form button:hover {
+button:hover {
   background-color: #17253A; /* Brisk Blue */
 }
-
 
 
 /* Tables */
