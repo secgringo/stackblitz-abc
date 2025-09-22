@@ -6,6 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   form.addEventListener("submit", (event) => {
     event.preventDefault();
+    
+document.getElementById("clearFeedback").addEventListener("click", () => {
+  localStorage.removeItem("feedbackEntries");
+  document.getElementById("feedbackList").innerHTML = "";
+  document.getElementById("formMessage").textContent = "🗑️ All submissions cleared.";
+});
 
     // Grab values
     const name = document.getElementById("name").value.trim();
@@ -46,3 +52,4 @@ document.addEventListener("DOMContentLoaded", () => {
   // Load on page start
   loadFeedback();
 });
+
