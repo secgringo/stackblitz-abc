@@ -118,6 +118,26 @@ nav ul { list-style: none; display: flex; gap: 15px; }
 nav a { color: var(--endurance-white); text-decoration: none; font-weight: bold; }
 nav a:hover { color: var(--accent-color); }
 
+.logo-banner {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* space between logo & title */
+}
+
+.logo-banner img {
+  width: 60px;   /* adjust as needed */
+  height: auto;
+}
+
+.site-title {
+  font-family: Arial, sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 0;
+  color: #00231C; /* Detritus Green text color from your palette */
+}
+
+
 /* Footer */
 footer {
   background: var(--secondary-color);
