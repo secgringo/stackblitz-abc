@@ -188,6 +188,35 @@ footer form input[type="email"] {
   }
 }
 
+
+footer .social {
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer .social a {
+  color: #FCFCFC; /* Endurance White */
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: bold;
+}
+
+footer .social a:hover {
+  color: #DEF479; /* Lime Lift highlight on hover */
+}
+
+/* Mobile-friendly stack */
+@media (max-width: 500px) {
+  footer .social {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    align-items: center;
+  }
+}
+
+
+
 /* Sections */
 section { padding: 30px; }
 
