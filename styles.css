@@ -230,6 +230,27 @@ section { padding: 30px; }
 .card.lime { background: var(--lime-lift); border-color: var(--secondary-color); }
 .card.white { background: var(--endurance-white); border-color: var(--aqua-pulse); }
 
+.card-row .card {
+  padding: 15px 12px;
+}
+
+.card-row .card h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+.card-row .card p {
+  margin: 0 0 10px;
+}
+
+.card-row .card img {
+  margin-top: 10px;
+  max-height: 160px;
+  object-fit: contain;
+}
+
+
+
 /* Buttons */
 button,
 input[type="submit"],
