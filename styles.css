@@ -264,5 +264,23 @@ table th, table td {
   text-align: center;
 }
 
+/* Card Style Rows */
+.card-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card-row .card {
+  flex: 1 1 100%;
+}
+
+@media (min-width: 768px) {
+  .card-row .card {
+    flex: 1 1 48%;
+  }
+}
+
+
 /* Background Utility */
 .bg
