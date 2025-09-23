@@ -157,56 +157,85 @@ header nav a:hover {
     text-decoration: underline;
 }
 
-/* Footer */
+/* Footer styling */
+footer {
+  background-color: #17253F; /* Brisk Blue */
+  color: #FCFCFC;           /* Endurance White */
+  padding: 20px;
+  text-align: center;
+}
+
+/* Footer text */
+footer p,
+footer label {
+  color: #FCFCFC;
+}
+
+/* Footer links */
+footer a {
+  color: #FCFCFC;
+  text-decoration: none;
+  margin: 0 6px;
+  font-weight: bold;
+}
+
+footer a:hover {
+  color: #DEF479; /* Lime Lift hover highlight */
+}
+
+/* Subscribe form */
 footer form {
   display: flex;
   align-items: center;
-  gap: 8px; /* space between input and button */
+  gap: 8px;
   justify-content: center;
-  flex-wrap: wrap; /* allow wrapping on small screens */
+  flex-wrap: wrap;
+  margin-top: 10px;
 }
 
 footer form input[type="email"] {
   flex: 1;
-  min-width: 200px; /* prevent input from shrinking too much */
+  min-width: 200px;
   padding: 8px;
   border-radius: 4px;
   border: 1px solid #ccc;
   font-size: 14px;
 }
 
-/* Mobile-friendly stack */
+/* Buttons in footer */
+footer button,
+footer input[type="submit"],
+footer input[type="button"] {
+  background-color: #2343BD; /* Intensity Indigo */
+  color: #FCFCFC;            /* Endurance White */
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: filter 0.3s ease;
+}
+
+/* Grayscale hover effect */
+footer button:hover,
+footer input[type="submit"]:hover,
+footer input[type="button"]:hover {
+  filter: grayscale(100%);
+}
+
+/* Mobile adjustments */
 @media (max-width: 500px) {
   footer form {
     flex-direction: column;
-    align-items: stretch; /* make input & button full width */
+    align-items: stretch;
   }
 
   footer form input[type="email"],
   footer form button {
     width: 100%;
   }
-}
 
-
-footer .social {
-  margin-top: 10px;
-  text-align: center;
-}
-
-footer .social a {
-  color: #FCFCFC; /* Endurance White */
-  text-decoration: none;
-  margin: 0 6px;
-  font-weight: bold;
-}
-
-footer .social a:hover {
-  color: #DEF479; /* Lime Lift highlight on hover */
-}
-
-/* Mobile-friendly stack */
-@media (max-width: 500px) {
   footer .social {
     display: flex;
     flex-direction: column;
@@ -214,6 +243,7 @@ footer .social a:hover {
     align-items: center;
   }
 }
+
 
 
 
