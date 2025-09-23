@@ -2,10 +2,10 @@
     COLOR STYLES CONFIGS
   ________________________________ */
 
-  :ROOT {
+  :root {
     --brisk-blue: #17253F;
-    --intesnisty-indigo: #2343BD;
-    --aqual-pulse: #91B9D2;
+    --intensity-indigo: #2343BD;
+    --aqua-pulse: #91B9D2;
     --lime-lift: #DEF479;
     --endurance-white: #FCFCFC;
     --detritus-green: #00231C;
@@ -14,7 +14,7 @@
   --primary-color: var(--brisk-blue);
   --secondary-color: var(--intensity-indigo);
   --accent-color: var(--lime-lift);
-  --background-color: var(--indurance-white);
+  --background-color: var(--endurance-white);
   --text-color: var(--detritus-green);
   }
 
@@ -24,7 +24,7 @@
     ______________________________
   /* Import Google fonts */
   @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap'); /* Fall back to system if font is missing
+  @import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap'); /* Fall back to system if font is missing */
 
 /* Title Large → h1 */
 h1 {
@@ -150,7 +150,7 @@ header nav ul {
 header nav a {
     text-decoration: none;
     color: FCFCFC; /* Endurance White */
-    font-weiht: bold;
+    font-weight: bold;
 }
 
 header nav a:hover {
@@ -245,8 +245,6 @@ footer input[type="button"]:hover {
 }
 
 
-
-
 /* Sections */
 section { padding: 30px; }
 
@@ -278,10 +276,9 @@ input[type="button"] {
 /* Hover effect */
 button:hover,
 input[type="submit"]:hover,
-input[type="button":hover {
+input[type="button"]:hover {
   background-color: #2343BD; /* Intensity Indigo */
 }
-
 
 /* Tables */
 table { width: 100%; border-collapse: collapse; margin-top: 20px; }
