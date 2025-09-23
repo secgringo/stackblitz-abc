@@ -188,17 +188,46 @@ footer form button {
 /* Sections & Cards */
 section { padding: 30px; }
 
+/* Generic card style — used everywhere */
 .card {
   border: 1px solid var(--aqua-pulse);
   padding: 15px;
   border-radius: 5px;
-  text-align: center;
   background: var(--endurance-white);
+  text-align: left;
+  margin-bottom: 20px;
 }
 
 .card img {
   max-width: 100%;
   height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* Testimonial-specific enhancements */
+.card-row .card {
+  padding: 16px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 320px;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card-row .card h3,
+.card-row .card p {
+  text-align: center;
+}
+
+.card-row .card img {
+  margin-top: auto;
+  max-width: 140px;
+  max-height: 140px;
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .card.aqua { background: var(--aqua-pulse); border-color: var(--secondary-color); }
@@ -296,18 +325,6 @@ section.bg-lime h1, section.bg-lime h2, section.bg-lime h3 {
   margin: 8px 5px;
 }
 
-/* Card Row Layout */
-.card-row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 20px;
-  margin-top: 20px;
-}
-
-.card-row .card {
-  width: 100%;
-}
 
 @media (min-width: 768px) {
   .card-row .card {
