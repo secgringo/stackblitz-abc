@@ -260,12 +260,20 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
-}
-table th, table td {
-  border: 1px solid var(--aqua-pulse);
-  padding: 10px;
+
+/* Business Hours Table Styles */
+table th {
+  font-size: 18px;
+  font-weight: bold;
   text-align: center;
 }
+
+table td {
+  font-weight: bold;
+  text-align: center;
+}
+
+
 
 /* Background Utility */
 .bg-aqua { background-color: var(--aqua-pulse); color: var(--text-color); }
