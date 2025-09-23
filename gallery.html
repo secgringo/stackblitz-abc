@@ -9,7 +9,6 @@
   </head>
   <body>
 
-
 <header>
   <div class="logo-banner">
     <img src="logo.png" alt="ABC Fitness Studio Logo">
@@ -23,7 +22,6 @@
       <li><a href="custom.html">Community</a></li>
     </ul>
   </nav>
-  <!-- View Cart Button -->
   <button id="viewCartBtn" class="cart-btn">🛒 View Cart</button>
 </header>
 
@@ -57,27 +55,15 @@
   </table>
 </section>
 
-
-<!-- Modal for Cart -->
-<div id="cartModal" class="modal" style="display:none;">
+<!-- Cart Modal -->
+<div id="cartModal">
   <div class="modal-content">
     <h2>Your Shopping Cart</h2>
     <ul id="cartItems"></ul>
-    <button id="clearCartBtn">Clear Cart</button>
-    <button id="processOrderBtn">Process Order</button>
-    <button onclick="document.getElementById('cartModal').style.display='none'">Close</button>
-  </div>
-</div>
-
-<!-- Cart Modal -->
-<div id="cartModal" class="cart-modal">
-  <div class="cart-content">
-    <span id="closeCart" class="close">&times;</span>
-    <h2>Your Shopping Cart</h2>
-    <ul id="cartItems"></ul>
     <div class="cart-actions">
-      <button id="clearCart">Clear Cart</button>
-      <button id="processOrder">Process Order</button>
+      <button id="clearCartBtn">Clear Cart</button>
+      <button id="processOrderBtn">Process Order</button>
+      <button onclick="document.getElementById('cartModal').style.display='none'">Close</button>
     </div>
   </div>
 </div>
@@ -95,7 +81,6 @@
     <a href="#">X</a>
   </div>
 </footer>
-
 
 </body>
 </html>
