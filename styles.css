@@ -267,17 +267,19 @@ table th, table td {
 /* Card Style Rows */
 .card-row {
   display: flex;
-  gap: 20px;
   flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
 }
 
 .card-row .card {
-  flex: 1 1 100%;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
   .card-row .card {
-    flex: 1 1 48%;
+    width: 48%;
   }
 }
 
