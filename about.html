@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About Us | ABC Fitness Studio</title>
+  <title>About Us</title>
   <link rel="stylesheet" href="styles.css" />
   <script src="form-storage.js" defer></script>
 </head>
@@ -33,31 +33,32 @@
   <h2>Business Hours</h2>
   <table class="business-hours">
     <tr><th>Day</th><th>Hours</th></tr>
-    <tr><td>Mon - Fri</td><td>6:00 AM - 9:00 PM</td></tr>
-    <tr><td>Saturday</td><td>8:00 AM - 8:00 PM</td></tr>
-    <tr><td>Sunday</td><td>8:00 AM - 6:00 PM</td></tr>
+    <tr><td>📅 Mon – Fri</td><td>6:00 AM – 9:00 PM</td></tr>
+    <tr><td>🎉 Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
+    <tr><td>🌞 Sunday</td><td>8:00 AM – 6:00 PM</td></tr>
   </table>
 </section>
 
-
 <section class="bg-lime">
-  <h2>Feedback & Custom Orders</h2>
-  <form id="feedback-form">
-    <label for="name">Name:</label><br />
-    <input type="text" id="name" name="name" required><br /><br />
+  <div class="form-container">
+    <h2>Feedback & Custom Orders</h2>
+    <form id="feedback-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" required />
 
-    <label for="email">Email:</label><br />
-    <input type="email" id="email" name="email" required><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" required />
 
-    <label for="phone">Phone:</label><br />
-    <input type="tel" id="phone" name="phone"><br /><br />
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" required />
 
-    <label for="message">Feedback / Custom Order:</label><br />
-    <textarea id="message" name="message" rows="5" required></textarea><br /><br />
+      <label for="feedback">Feedback / Custom Order:</label>
+      <textarea id="feedback" rows="5" required></textarea>
 
-    <button type="submit">Submit</button>
-    <button type="button" onclick="clearFormData()">Clear Submission</button>
-  </form>
+      <input type="submit" value="Submit" />
+      <input type="button" value="Clear Previous Submission" onclick="clearStorage()" />
+    </form>
+  </div>
 </section>
 
 <footer>
@@ -76,4 +77,3 @@
 
 </body>
 </html>
-
