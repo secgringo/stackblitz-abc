@@ -63,12 +63,19 @@ nav ul li a {
 
 /* Cart Button */
 .cart-btn {
-  background-color: var(--lime-lift);
-  border: none;
+  background-color: var(--endurance-white);
+  color: var(--brisk-blue);
+  border: 2px solid var(--endurance-white);
   padding: 8px 16px;
   font-weight: bold;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.cart-btn:hover {
+  background-color: var(--aqua-pulse);
+  color: var(--endurance-white);
+  border-color: var(--aqua-pulse);
 }
 
 /* Section Headings */
