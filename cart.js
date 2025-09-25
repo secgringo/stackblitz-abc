@@ -1,4 +1,3 @@
-// cart.js
 let cart = [];
 
 document.querySelectorAll('.add-to-cart').forEach(button => {
@@ -11,16 +10,22 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
 
 document.getElementById('viewCartBtn').addEventListener('click', function () {
   document.getElementById('cartModal').style.display = 'block';
+  updateCartUI();
 });
 
 function closeCart() {
   document.getElementById('cartModal').style.display = 'none';
 }
 
-
 function updateCartUI() {
-  const cartItems = document.getElementById('cart-items');
+  const cartItems = document.getElementById('cartItems');
   cartItems.innerHTML = '';
+
+  if (cart.length === 0) {
+    cartItems.innerHTML = '<li>Your cart is empty.</li>';
+    return;
+  }
+
   cart.forEach(item => {
     const li = document.createElement('li');
     li.textContent = item;
