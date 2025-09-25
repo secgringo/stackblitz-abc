@@ -252,6 +252,7 @@ td {
   padding: 10px;
   text-align: center;
   border-bottom: 2px solid var(--aqua-pulse);
+  font-size: 48px;
 }
 
 /* Product Images in Table */
