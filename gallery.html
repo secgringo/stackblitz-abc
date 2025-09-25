@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Gallery</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | ABC Fitness Studio</title>
+  <link rel="stylesheet" href="styles.css">
   <script src="cart.js" defer></script>
 </head>
 <body>
 
 <header>
   <div class="logo-banner">
-    <img src="logo.png" alt="ABC Fitness Studio Logo" />
+    <img src="logo.png" alt="ABC Fitness Studio Logo">
     <h1 class="site-title">ABC Fitness Studio</h1>
   </div>
   <nav>
@@ -22,36 +22,64 @@
       <li><a href="custom.html">Community</a></li>
     </ul>
   </nav>
+  <button id="viewCartBtn" class="cart-btn">🛒 View Cart</button>
 </header>
 
 <section class="bg-white">
-  <h1>Our Gallery</h1>
-  <p>Explore our vibrant community and top-notch facility in action!</p>
-
-  <div class="gallery-grid">
-    <div class="gallery-item">
-      <img src="img1.jpg" alt="Workout 1">
-      <button class="add-to-cart" data-item="Session 1">Add to Cart</button>
-    </div>
-    <div class="gallery-item">
-      <img src="img2.jpg" alt="Workout 2">
-      <button class="add-to-cart" data-item="Session 2">Add to Cart</button>
-    </div>
-    <!-- Add more items as needed -->
-  </div>
-
-  <button id="view-cart-btn">View Cart</button>
+  <h1>Shop Our Products</h1>
+  <table>
+    <tr>
+      <th>Image</th>
+      <th>Item</th>
+      <th>Description</th>
+      <th>Action</th>
+    </tr>
+    <tr>
+      <td><img src="Client2_YogaMat.png" alt="Yoga Mat" width="100"></td>
+      <td>Yoga Mat</td>
+      <td>Durable and non-slip surface</td>
+      <td><button class="add-to-cart" data-item="Yoga Mat">Add to Cart</button></td>
+    </tr>
+    <tr>
+      <td><img src="Client2_WaterBottle.png" alt="Water Bottle" width="100"></td>
+      <td>Water Bottle Black</td>
+      <td>Water Bottle White</td>
+      <td><button class="add-to-cart" data-item="Water Bottle">Add to Cart</button></td>
+    </tr>
+    <tr>
+      <td><img src="Client2_TeeShirt.png" alt="Fitness T-Shirt" width="100"></td>
+      <td>Fitness T-Shirt</td>
+      <td>Breathable cotton, sizes S-XL</td>
+      <td><button class="add-to-cart" data-item="Fitness T-Shirt">Add to cart</button></td>
+    </tr>
+  </table>
 </section>
 
 <!-- Cart Modal -->
-<div id="cart-modal">
-  <h3>Your Cart</h3>
-  <ul id="cart-items"></ul>
-  <button onclick="closeCart()">Close</button>
+<div id="cartModal" style="display: none;">
+  <div class="modal-content">
+    <h2>Your Shopping Cart</h2>
+    <ul id="cartItems"></ul>
+    <div class="cart-actions">
+      <button id="clearCartBtn">Clear Cart</button>
+      <button id="processOrderBtn">Process Order</button>
+      <button onclick="document.getElementById('cartModal').style.display='none'">Close</button>
+    </div>
+  </div>
 </div>
 
 <footer>
   <p>&copy; 2025 ABC Fitness Studio</p>
+  <form>
+    <label for="newsletter">Subscribe:</label>
+    <input type="email" id="newsletter" placeholder="Enter your email">
+    <button type="submit">Subscribe</button>
+  </form>
+  <div class="social">
+    <a href="#">Facebook</a> | &nbsp;
+    <a href="#">Instagram</a> | &nbsp;
+    <a href="#">X</a>
+  </div>
 </footer>
 
 </body>
