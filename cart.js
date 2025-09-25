@@ -9,13 +9,14 @@ document.querySelectorAll('.add-to-cart').forEach(button => {
   });
 });
 
-document.getElementById('view-cart-btn').addEventListener('click', function () {
-  document.getElementById('cart-modal').style.display = 'block';
+document.getElementById('viewCartBtn').addEventListener('click', function () {
+  document.getElementById('cartModal').style.display = 'block';
 });
 
 function closeCart() {
-  document.getElementById('cart-modal').style.display = 'none';
+  document.getElementById('cartModal').style.display = 'none';
 }
+
 
 function updateCartUI() {
   const cartItems = document.getElementById('cart-items');
@@ -26,3 +27,4 @@ function updateCartUI() {
     cartItems.appendChild(li);
   });
 }
+
