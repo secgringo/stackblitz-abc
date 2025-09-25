@@ -1,60 +1,28 @@
 // cart.js
+let cart = [];
 
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-
-
-// Add to Cart
-document.querySelectorAll(".add-to-cart").forEach(button => {
-  button.addEventListener("click", () => {
-    const item = button.dataset.item;
+document.querySelectorAll('.add-to-cart').forEach(button => {
+  button.addEventListener('click', function () {
+    const item = this.getAttribute('data-item');
     cart.push(item);
-    localStorage.setItem("cart", JSON.stringify(cart));
-    alert("Item added.");
+    updateCartUI();
   });
 });
 
-// View Cart
-document.getElementById("viewCartBtn").addEventListener("click", () =>{
-  const cartModal = document.getElementById("cartModal");
-  const cartItems = document.getElementById("cartItems");
-  cartItems.innerHTML = "";
-
-  if (cart.length === 0) {
-    cartItems.innerHTML = "<li>Your cart is empty.</li>";
-  } else {
-    cart.forEach(item => {
-      let li = document.createElement ("li");
-      li.textContent = item;
-      cartItems.appendChild(li);
-    });
-  }
-
-  cartModal.style.display = "block";
+document.getElementById('view-cart-btn').addEventListener('click', function () {
+  document.getElementById('cart-modal').style.display = 'block';
 });
 
-// Clear Cart
-document.getElementById("clearCartBtn").addEventListener("click", () => {
-  cart = [];
-  localStorage.setItem("cart", JSON.stringify(cart));
-  document.getElementById("cartItems").innerHTML = "<li>Your cart is empty.</li>"
-});
+function closeCart() {
+  document.getElementById('cart-modal').style.display = 'none';
+}
 
-//Process Order
-document.getElementById("processOrderBtn").addEventListener("click", ()  => {
-  if (cart.length > 0) {
-    alert("Thank you for your order.");
-    cart = [];
-    localStorage.setItem("cart", JSON.stringify(cart));
-    document.getElementById("cartItems").innerHTML = "<li>Your cart is empty.</li>"
-  } else {
-    alert("Your cart is empty.");
-  }
-});
-
-// Close modal by clicking outside
-window.onclick = function(event) {
-  const modal = document.getElementById("cartModal");
-  if (event.target === modal) {
-    modal.style.display = "none";
-  }
-};
+function updateCartUI() {
+  const cartItems = document.getElementById('cart-items');
+  cartItems.innerHTML = '';
+  cart.forEach(item => {
+    const li = document.createElement('li');
+    li.textContent = item;
+    cartItems.appendChild(li);
+  });
+}
