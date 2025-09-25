@@ -61,6 +61,12 @@ header {
   align-items: center;
 }
 
+.logo-banner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
 .logo-banner img {
   width: 60px;
   height: auto;
@@ -68,9 +74,10 @@ header {
 }
 
 .site-title {
-  font-size: 24px;
+  font-size: 38px; /* ~60% bigger than 24px */
   margin: 0;
   color: var(--endurance-white);
+  font-weight: bold;
 }
 
 header nav ul {
