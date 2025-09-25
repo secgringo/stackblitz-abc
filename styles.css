@@ -245,14 +245,14 @@ th {
   background-color: var(--lime-lift);
   color: var(--endurance-black);
   padding: 10px;
-  font-size: 52px;
+  font-size: 36px;
 }
 
 td {
   padding: 10px;
   text-align: center;
   border-bottom: 2px solid var(--aqua-pulse);
-  font-size: 48px;
+  font-size: 30px;
 }
 
 /* Product Images in Table */
