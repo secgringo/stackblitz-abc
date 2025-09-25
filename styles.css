@@ -53,19 +53,18 @@ strong, b {
 
 /* Header */
 header {
-  background: var(--primary-color);
-  color: var(--endurance-white);
-  padding: 15px 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--brisk-blue);
+  padding: 10px 30px;
+  flex-wrap: wrap;
 }
 
-/* Header Container */
-header {
+.logo-banner {
   display: flex;
-  flex-direction: column;
   align-items: center;
+  gap: 20px;
 }
 
 /* Logo + Title row stays left-aligned */
@@ -107,20 +106,29 @@ nav ul li a {
 }
 
 .site-title {
-  font-size: 38px; /* ~60% bigger than 24px */
-  margin: 0;
+  font-size: 2rem;
   color: var(--endurance-white);
-  font-weight: bold;
 }
 
-header nav ul {
+nav {
+  flex-grow: 1;
+  text-align: center;
+}
+
+nav ul {
+  display: inline-flex;
+  gap: 30px;
   list-style: none;
-  display: flex;
-  gap: 20px;
   margin: 0;
   padding: 0;
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: var(--endurance-white);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
 header nav a {
   text-decoration: none;
   color: var(--endurance-white);
