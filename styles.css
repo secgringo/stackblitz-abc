@@ -238,13 +238,14 @@ table {
   margin-top: 20px;
   background-color: var(--endurance-white);
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-size: 48px;
 }
 
 th {
   background-color: var(--lime-lift);
   color: var(--endurance-black);
   padding: 10px;
-  font-size: 20px;
+  font-size: 52px;
 }
 
 td {
@@ -253,6 +254,11 @@ td {
   border-bottom: 2px solid var(--aqua-pulse);
 }
 
+/* Product Images in Table */
+.product-img {
+  width: 200px;
+  height: auto;
+}
 
 /* Cards */
 .card {
