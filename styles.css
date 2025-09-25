@@ -166,6 +166,32 @@ footer form button {
   }
 }
 
+
+/* Business Hours Table Styles */
+.business-hours {
+  max-width: 500px;
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 2px solid var(--aqua-pulse);
+  background-color: var(--endurance-white);
+  font-size: 26px; /* 70% increase over ~16px */
+}
+
+.business-hours th,
+.business-hours td {
+  border: 1px solid var(--aqua-pulse);
+  padding: 10px 16px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.business-hours th {
+  font-size: 28px;
+  background-color: var(--lime-lift);
+}
+
+
+
 /* Section Backgrounds */
 section.bg-aqua {
   background-color: var(--aqua-pulse);
