@@ -169,12 +169,15 @@ footer form button {
 
 /* Business Hours Table Styles */
 .business-hours {
-  max-width: 500px;
+  max-width: 700px;
   margin: 0 auto;
   border-collapse: collapse;
   border: 2px solid var(--aqua-pulse);
   background-color: var(--endurance-white);
-  font-size: 26px; /* 70% increase over ~16px */
+  font-size: 26px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .business-hours th,
@@ -189,7 +192,6 @@ footer form button {
   font-size: 28px;
   background-color: var(--lime-lift);
 }
-
 
 
 /* Section Backgrounds */
@@ -311,6 +313,29 @@ table td {
     width: 48%;
   }
 }
+
+
+/* Form Container */
+.form-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media (min-width: 900px) {
+  #feedback-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  #feedback-form textarea,
+  #feedback-form input[type="submit"],
+  #feedback-form input[type="button"] {
+    grid-column: span 2;
+  }
+}
+
+
 
 /* Modal */
 #cartModal {
