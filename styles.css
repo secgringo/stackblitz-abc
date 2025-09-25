@@ -236,22 +236,23 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin-top: 20px;
+  background-color: var(--endurance-white);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-table th {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
+th {
+  background-color: var(--lime-lift);
+  color: var(--endurance-black);
   padding: 10px;
-  border: 1px solid var(--aqua-pulse);
+  font-size: 20px;
 }
 
-table td {
-  font-weight: bold;
-  text-align: center;
+td {
   padding: 10px;
-  border: 1px solid var(--aqua-pulse);
+  text-align: center;
+  border-bottom: 2px solid var(--aqua-pulse);
 }
+
 
 /* Cards */
 .card {
@@ -383,4 +384,20 @@ table td {
 
 #cartModal .modal-content button {
   margin: 8px 5px;
+}
+
+#cartModal .add-to-cart
+.add-to-cart {
+  background-color: var(--lime-lift);
+  border: none;
+  padding: 10px 16px;
+  font-weight: bold;
+  color: var(--endurance-black);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: var(--aqua-pulse);
 }
