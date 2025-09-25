@@ -15,7 +15,6 @@ body {
   color: #333;
 }
 
-/* Header */
 header {
   display: flex;
   justify-content: space-between;
@@ -25,20 +24,50 @@ header {
   flex-wrap: wrap;
 }
 
-.logo-banner {
+/* Left: Logo + Title */
+.header-left {
   display: flex;
   align-items: center;
   gap: 20px;
 }
 
-.logo-banner img {
+.header-left img {
   height: 60px;
 }
 
 .site-title {
   font-size: 2rem;
   color: var(--endurance-white);
+  margin: 0;
 }
+
+/* Center: Navigation */
+.header-center {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.header-center ul {
+  display: inline-flex;
+  gap: 30px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header-center ul li a {
+  text-decoration: none;
+  color: var(--endurance-white);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* Right: Cart Button */
+.header-right {
+  display: flex;
+  align-items: center;
+}
+
 
 /* Navigation */
 nav {
