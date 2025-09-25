@@ -386,7 +386,7 @@ td {
   margin: 8px 5px;
 }
 
-#cartModal .add-to-cart
+/* Button Styling */
 .add-to-cart {
   background-color: var(--lime-lift);
   border: none;
