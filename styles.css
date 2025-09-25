@@ -89,7 +89,7 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  color: var(--endurance-black); /* or your preferred nav link color */
+  color: var(--endurance-white); /* or your preferred nav link color */
   font-weight: bold;
 }
 
