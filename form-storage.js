@@ -1,31 +1,42 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.getElementById('feedback-form');
+// form-storage.js
 
-  // Load saved values on page load
-  const saved = JSON.parse(localStorage.getItem('feedbackFormData'));
-  if (saved) {
-    form.name.value = saved.name || '';
-    form.email.value = saved.email || '';
-    form.phone.value = saved.phone || '';
-    form.message.value = saved.message || '';
-  }
+document.addEventListener("DOMContentLoaded", () => {
+  const fields = ["name", "email", "message"];
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
-    const formData = {
-      name: form.name.value.trim(),
-      email: form.email.value.trim(),
-      phone: form.phone.value.trim(),
-      message: form.message.value.trim()
-    };
-    localStorage.setItem('feedbackFormData', JSON.stringify(formData));
-    alert("Thanks for your feedback!");
-    form.reset();
+  fields.forEach(id => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    // Load saved value
+    const saved = localStorage.getItem(`form_${id}`);
+    if (saved) el.value = saved;
+
+    // Save on input
+    el.addEventListener("input", () => {
+      localStorage.setItem(`form_${id}`, el.value);
+    });
   });
-});
 
-function clearFormData() {
-  localStorage.removeItem('feedbackFormData');
-  document.getElementById('feedback-form').reset();
-  alert("Stored form data cleared.");
-}
+  // Optional: clear localStorage on form submit
+  const form = document.querySelector("form");
+  if (form) {
+    form.addEventListener("submit", (e) => {
+      // Example validation: check if fields are not empty
+      let valid = true;
+      fields.forEach(id => {
+        const value = document.getElementById(id)?.value.trim();
+        if (!value) {
+          alert(`Please fill in your ${id}`);
+          valid = false;
+        }
+      });
+
+      if (!valid) {
+        e.preventDefault();
+        return;
+      }
+
+      fields.forEach(id => localStorage.removeItem(`form_${id}`));
+    });
+  }
+});
