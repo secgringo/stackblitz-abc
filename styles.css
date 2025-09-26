@@ -232,6 +232,13 @@ footer .social a{
 }
 footer .social a:hover{ text-decoration:underline }
 
+footer .copyright {
+  margin-top: 0.75rem;
+  text-align: center;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
 /* ===========================
    CART MODAL
    =========================== */
@@ -262,3 +269,4 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
