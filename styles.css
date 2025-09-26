@@ -249,7 +249,7 @@ footer .copyright {
 .cart-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* slightly darker overlay */
+  background: rgba(0, 0, 0, 0.6); /* keep dark overlay */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -257,16 +257,17 @@ footer .copyright {
 }
 
 .modal-content {
-  background: var(--surface);
-  color: var(--text);
+  background: var(--aqua-pulse); /* ✅ brand aqua */
+  color: var(--brisk-blue);      /* ✅ navy text for contrast */
   border-radius: 12px;
   max-width: 500px;
   width: 90%;
   padding: 1.5rem;
   box-shadow: 0 10px 25px var(--shadow);
-  border: 1px solid var(--divider);
+  border: 2px solid var(--brisk-blue);
   animation: fadeIn 0.3s ease-in-out;
 }
+
 
 #cartItems {
   list-style: none;
@@ -308,6 +309,7 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
 
 
 
