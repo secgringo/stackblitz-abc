@@ -1,193 +1,102 @@
+/* ---------------------------------
+   COLOR VARIABLES
+---------------------------------- */
 :root {
-  --primary: #005f73;
-  --accent: #94d2bd;
-  --danger: #d00000;
-  --text: #333;
-  --bg: #fdfdfd;
-  --spacing: 1rem;
+  --brisk-blue: #17253F; /* ✅ corrected, assuming it should be a 6-digit hex */
+  --intensity-indigo: #2343BD;
+  --aqua-pulse: #91B9D2;
+  --lime-lift: #DEF479;
+  --endurance-white: #FCFCFC;
+  --detritus-green: #00231C;
+
+  /* Assign roles */
+  --primary-color: var(--brisk-blue);
+  --secondary-color: var(--intensity-indigo);
+  --accent-color: var(--lime-lift);
+  --background-color: var(--endurance-white);
+  --text-color: var(--detritus-green);
 }
 
-* {
+/* ---------------------------------
+   TYPOGRAPHY
+---------------------------------- */
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap'); /* fallback to system if missing */
+
+/* Headings */
+.title-large { font-family: Arial, sans-serif; font-weight: 700; font-size: 30px; color: var(--text-color); }
+.title { font-family: Arial, sans-serif; font-weight: 700; font-size: 25px; color: var(--text-color); }
+.subtitle { font-family: 'Comfortaa', cursive; font-weight: 400; font-size: 15px; color: var(--secondary-color); }
+
+/* Body text */
+.body-large { font-family: Calibri, sans-serif; font-weight: 400; font-size: 20px; color: var(--text-color); }
+.body-strong { font-family: Calibri, sans-serif; font-weight: 700; font-size: 16px; color: var(--text-color); }
+.body { font-family: Calibri, sans-serif; font-weight: 400; font-size: 16px; color: var(--text-color); }
+
+/* Captions */
+.caption { font-family: Arial, sans-serif; font-weight: 700; font-size: 11px; color: var(--secondary-color); }
+
+/* ---------------------------------
+   GLOBAL STYLES
+---------------------------------- */
+body {
+  font-family: Calibri, sans-serif;
+  background: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: var(--bg);
-  color: var(--text);
-  line-height: 1.6;
-  padding: var(--spacing);
-  transition: background-color 0.3s, color 0.3s;
-}
-
-header, footer {
-  background: var(--primary);
-  color: white;
-  padding: var(--spacing);
-  text-align: center;
-}
-
-.header-left, .header-center, .header-right {
-  display: inline-block;
-}
-
-.header-center ul {
-  list-style: none;
-}
-
-.header-center ul li {
-  display: inline;
-  margin: 0 0.5rem;
-}
-
-.header-center ul li a {
-  color: white;
-  text-decoration: none;
-}
-
-.header-center ul li a:hover {
-  text-decoration: underline;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 1rem auto;
-  padding: var(--spacing);
-}
-
-.btn {
-  background: var(--accent);
-  border: none;
-  padding: 0.5rem 1rem;
-  margin: 0.5rem 0;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.btn:hover {
-  background: var(--primary);
-  color: white;
-}
-
-.bg-white {
-  background: white;
-  padding: var(--spacing);
-}
-
-.bg-aqua {
-  background: aqua;
-  padding: var(--spacing);
-}
-
-.bg-lime {
-  background: limegreen;
-  padding: var(--spacing);
-}
-
-.card-row {
+/* Header */
+header {
+  background: var(--primary-color);
+  color: var(--endurance-white);
+  padding: 15px 20px;
   display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-}
-
-.card {
-  flex: 1 1 300px;
-  padding: var(--spacing);
-  background: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.card img {
-  max-width: 100%;
-  height: auto;
-  margin-top: 1rem;
-}
-
-.product-table {
-  width: 100%;
-  border-collapse: collapse;
-}
-
-.product-table th,
-.product-table td {
-  border: 1px solid #ccc;
-  padding: 0.5rem;
-  text-align: left;
-}
-
-.product-img {
-  max-width: 80px;
-}
-
-.cart-modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,0.5);
-  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
 }
+header img.logo { height: 50px; }
+nav ul { list-style: none; display: flex; gap: 15px; }
+nav a { color: var(--endurance-white); text-decoration: none; font-weight: bold; }
+nav a:hover { color: var(--accent-color); }
 
-.modal-content {
-  background: white;
-  padding: var(--spacing);
-  border-radius: 8px;
-  max-width: 90%;
+/* Footer */
+footer {
+  background: var(--secondary-color);
+  color: var(--endurance-white);
+  padding: 20px;
+  margin-top: 30px;
 }
+footer form { display: flex; gap: 10px; margin-top: 10px; }
+footer input[type="email"] { padding: 5px; flex: 1; border: 1px solid var(--aqua-pulse); }
+footer button { padding: 5px 10px; background: var(--accent-color); border: none; cursor: pointer; color: var(--text-color); }
+footer .social a { margin-right: 10px; color: var(--endurance-white); text-decoration: none; }
 
-.cart-actions {
-  margin-top: var(--spacing);
-  display: flex;
-  gap: 0.5rem;
+/* Cards */
+.card {
+  border: 1px solid var(--aqua-pulse);
+  padding: 15px;
+  border-radius: 5px;
+  text-align: center;
+  background: var(--endurance-white);
 }
+.card img { max-width: 100%; height: auto; }
 
-@media (max-width: 600px) {
-  .card-row {
-    flex-direction: column;
-  }
-  .header-left,
-  .header-right {
-    display: block;
-    text-align: center;
-    margin-bottom: var(--spacing);
-  }
-  .header-center ul {
-    display: block;
-  }
-  .header-center ul li {
-    display: block;
-    margin: 0.5rem 0;
-  }
+/* Buttons */
+button {
+  background: var(--secondary-color);
+  color: var(--endurance-white);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-family: Calibri, sans-serif;
 }
+button:hover { background: var(--primary-color); }
 
-/* Dark mode styles */
-.dark-mode {
-  background-color: #121212;
-  color: #f0f0f0;
-}
-
-.dark-mode header,
-.dark-mode footer {
-  background-color: #1f1f1f;
-}
-
-.dark-mode .header-center ul li a {
-  color: #ddd;
-}
-
-.dark-mode .btn {
-  background: #444;
-  color: #ddd;
-}
-
-.dark-mode .btn:hover {
-  background: var(--accent);
-}
+/* Sections */
+section { padding: 30px; }
+h1, h2, h3 { margin-bottom: 15px; }
