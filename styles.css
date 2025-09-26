@@ -164,8 +164,13 @@ header {
   color: var(--brisk-blue);
 }
 
+.card.brisk {
+  background: var(--brisk-blue);
+  color: var(--endurance-white);
+}
+
 .card img {
-  max-width: 100%;
+  max-width: 75%;
   border-radius: .5rem;
   margin-top: .75rem;
 }
