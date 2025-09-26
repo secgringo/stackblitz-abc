@@ -1,5 +1,3 @@
-// cart.js
-
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
@@ -22,9 +20,8 @@ function displayCart() {
     li.textContent = `${item.name} (x${item.quantity})`;
 
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "×"; // neutral glyph
+    removeBtn.textContent = "×";
     removeBtn.classList.add("btn", "remove-btn");
-    removeBtn.setAttribute("aria-label", `Remove ${item.name} from cart`);
     removeBtn.onclick = () => {
       cart.splice(index, 1);
       saveCart();
