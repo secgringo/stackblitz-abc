@@ -2,83 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Stackblitz ABC</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="form-storage.js" defer></script>
 </head>
 <body>
+  <header>
+    <h1>Stackblitz ABC</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="custom.html">Customize</a>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </nav>
+  </header>
 
-<header>
-  <div class="header-left">
-    <img src="logo.png" alt="ABC Fitness Studio Logo" />
-    <h1 class="site-title">ABC Fitness Studio</h1>
-  </div>
-  <nav class="header-center">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="custom.html">Community</a></li>
-    </ul>
-  </nav>
-  <div class="header-right">
-    <button id="viewCartBtn" class="cart-btn">🛒 View Cart</button>
-  </div>
-</header>
+  <main class="container">
+    <h2>Welcome!</h2>
+    <p>This is a homepage for the Stackblitz ABC project. Explore the site using the navigation above.</p>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Stackblitz ABC</p>
+  </footer>
 
-
-<section class="bg-aqua">
-  <h1>About Us</h1>
-  <p>ABC Fitness Studio is dedicated to helping you achieve your health goals with modern equipment and expert trainers.</p>
-</section>
-
-<section class="bg-white">
-  <h2>Business Hours</h2>
-  <table class="business-hours">
-    <tr><th>Day</th><th>Hours</th></tr>
-    <tr><td>📅 Mon – Fri</td><td>6:00 AM – 9:00 PM</td></tr>
-    <tr><td>🎉 Saturday</td><td>8:00 AM – 8:00 PM</td></tr>
-    <tr><td>🌞 Sunday</td><td>8:00 AM – 6:00 PM</td></tr>
-  </table>
-</section>
-
-<section class="bg-lime">
-  <div class="form-container">
-    <h2>Feedback & Custom Orders</h2>
-    <form id="feedback-form">
-      <label for="name">Name:</label>
-      <input type="text" id="name" required />
-
-      <label for="email">Email:</label>
-      <input type="email" id="email" required />
-
-      <label for="phone">Phone:</label>
-      <input type="tel" id="phone" required />
-
-      <label for="feedback">Feedback / Custom Order:</label>
-      <textarea id="feedback" rows="5" required></textarea>
-
-      <input type="submit" value="Submit" />
-      <input type="button" value="Clear Previous Submission" onclick="clearStorage()" />
-    </form>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 ABC Fitness Studio</p>
-  <form>
-    <label for="newsletter">Subscribe:</label>
-    <input type="email" id="newsletter" placeholder="Enter your email">
-    <button type="submit">Subscribe</button>
-  </form>
-  <div class="social">
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">X</a>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
