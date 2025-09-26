@@ -2,22 +2,15 @@
    ABC Fitness Studio — Brand Palette
    =========================== */
 :root{
-  /* Brand tokens (exactly as you provided) */
-  --brisk-blue:      #17253F;  /* deep navy */
-  --intensity-indigo:#2343BD;  /* vivid indigo */
-  --aqua-pulse:      #91B9D2;  /* soft aqua */
-  --lime-lift:       #DEF479;  /* light lime */
-  --endurance-white: #FCFCFC;  /* near-white */
-  --detritus-green:  #00231C;  /* deep green */
+  /* Brand tokens */
+  --brisk-blue:      #17253F;
+  --intensity-indigo:#2343BD;
+  --aqua-pulse:      #91B9D2;
+  --lime-lift:       #DEF479;
+  --endurance-white: #FCFCFC;
+  --detritus-green:  #00231C;
 
-  /* Assign roles */
-  --primary-color: var(--brisk-blue);
-  --secondary-color: var(--intensity-indigo);
-  --accent-color: var(--lime-lift);
-  --background-color: var(--endurance-white);
-  --text-color: var(--detritus-green);
-
-  /* Semantic tokens (all derived from brand tokens) */
+  /* Semantic tokens */
   --bg:              var(--endurance-white);
   --text:            var(--brisk-blue);
   --brand:           var(--brisk-blue);
@@ -27,7 +20,7 @@
   --surface-alt:     var(--aqua-pulse);
   --surface-soft:    var(--lime-lift);
 
-  /* Effects (derived via color-mix for consistency) */
+  /* Effects */
   --shadow:          color-mix(in srgb, var(--brisk-blue) 18%, transparent);
   --divider:         color-mix(in srgb, var(--brisk-blue) 20%, transparent);
   --overlay:         color-mix(in srgb, var(--brisk-blue) 55%, transparent);
@@ -44,9 +37,8 @@ body{
   line-height: 1.6;
 }
 
-/* Layout Helpers */
-.container{max-width:1000px;margin-inline:auto;padding:1rem}
 section{padding:2rem 1rem}
+.container{max-width:1000px;margin-inline:auto;padding:1rem}
 
 /* ===========================
    HEADER STYLES
@@ -58,7 +50,7 @@ header {
 
   display: flex;
   align-items: center;
-  justify-content: space-between; /* logo left, nav centered, cart (if any) right */
+  justify-content: space-between;
   padding: 0.75rem 1rem;
 }
 
@@ -79,7 +71,7 @@ header {
 }
 
 .header-center {
-  flex: 1; /* ensures nav takes space so it can be centered */
+  flex: 1;
   display: flex;
   justify-content: center;
 }
@@ -142,7 +134,7 @@ header {
   }
 
   .header-center {
-    order: 3; /* moves nav below logo/cart on small screens */
+    order: 3;
     width: 100%;
     justify-content: center;
   }
@@ -152,21 +144,9 @@ header {
   }
 }
 
-
-.cart-btn{
-  background: transparent;
-  color: var(--endurance-white);
-  border: 2px solid color-mix(in srgb, var(--endurance-white) 60%, transparent);
-  padding:.4rem .7rem; border-radius:.5rem; cursor:pointer; transition:.2s;
-}
-.cart-btn:hover,
-.cart-btn:focus-visible{
-  background: color-mix(in srgb, var(--endurance-white) 12%, transparent);
-  outline: 2px solid var(--endurance-white);
-  outline-offset: 2px;
-}
-
-/* Buttons */
+/* ===========================
+   BUTTONS
+   =========================== */
 .btn{
   background: var(--accent);
   color: var(--endurance-white);
@@ -183,18 +163,21 @@ header {
   outline-offset: 2px;
 }
 
-/* Section Brand Backgrounds (keep your class names) */
+/* ===========================
+   SECTIONS
+   =========================== */
 .bg-white{ background: var(--endurance-white); color: var(--brisk-blue) }
 .bg-aqua { background: var(--aqua-pulse);     color: var(--brisk-blue) }
 .bg-lime { background: var(--lime-lift);      color: var(--brisk-blue) }
 
-/* Headings in brand sections */
 .bg-aqua h1, .bg-aqua h2, .bg-aqua h3,
 .bg-lime h1, .bg-lime h2, .bg-lime h3{
   color: var(--brand);
 }
 
-/* Cards */
+/* ===========================
+   CARDS
+   =========================== */
 .card-row{ display:flex; flex-wrap:wrap; gap:1rem; justify-content:center }
 .card{
   flex:1 1 280px;
@@ -211,7 +194,9 @@ header {
 .card.white { background: var(--surface)      }
 .card img{ max-width:100%; height:auto; margin-top:.75rem; border-radius:.5rem }
 
-/* Tables (products + business hours) */
+/* ===========================
+   TABLES
+   =========================== */
 table{ width:100%; border-collapse:collapse; background: var(--surface) }
 th, td{ padding:.75rem; border:1px solid var(--divider) }
 thead th{
@@ -222,10 +207,11 @@ thead th{
 .business-hours th:first-child,
 .product-table th:first-child{ width:120px }
 
-/* Images in product table */
 .product-img{ max-width:84px; height:auto; border-radius:.35rem; box-shadow:0 2px 8px var(--shadow) }
 
-/* Footer */
+/* ===========================
+   FOOTER
+   =========================== */
 footer{
   background: var(--brand);
   color: var(--endurance-white);
@@ -246,7 +232,9 @@ footer .social a{
 }
 footer .social a:hover{ text-decoration:underline }
 
-/* Cart Modal */
+/* ===========================
+   CART MODAL
+   =========================== */
 .cart-modal{
   position:fixed; inset:0;
   background: var(--overlay);
@@ -265,20 +253,12 @@ footer .social a:hover{ text-decoration:underline }
 }
 .cart-actions{ display:flex; gap:.5rem; margin-top: .75rem; flex-wrap:wrap }
 
-/* Utility */
+/* ===========================
+   TYPOGRAPHY
+   =========================== */
 h1{font-size:clamp(1.5rem, 1.2rem + 1.2vw, 2.2rem)}
 h2{font-size:clamp(1.25rem, 1.05rem + 1vw, 1.6rem)}
 h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
-
-/* Responsive Header */
-@media (max-width: 800px){
-  header{ flex-wrap:wrap; gap:.75rem }
-  .header-center{ order:3; width:100%; justify-content:center }
-  .header-center ul{ justify-content:center }
-  .header-left{ width:100%; justify-content:center }
-  .header-right{ width:100%; justify-content:center }
-}
-
