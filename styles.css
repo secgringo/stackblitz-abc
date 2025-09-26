@@ -243,44 +243,44 @@ footer .copyright {
 
 
 /* ===========================
-   CART MODAL
+   CART MODAL — BRAND STYLES
    =========================== */
-/* Cart Modal */
 .cart-modal {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6); /* keep dark overlay */
+  background: rgba(0, 0, 0, 0.6); /* keep dark scrim */
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  padding: 1rem;
 }
 
 .modal-content {
-  background: var(--aqua-pulse); /* ✅ brand aqua */
-  color: var(--brisk-blue);      /* ✅ navy text for contrast */
+  background: var(--aqua-pulse);          /* ✅ Aqua Pulse */
+  color: var(--detritus-green);           /* ✅ Detritus Green text */
+  border: 2px solid var(--detritus-green);
   border-radius: 12px;
-  max-width: 500px;
-  width: 90%;
+  max-width: 520px;
+  width: 92%;
   padding: 1.5rem;
   box-shadow: 0 10px 25px var(--shadow);
-  border: 2px solid var(--brisk-blue);
-  animation: fadeIn 0.3s ease-in-out;
+  animation: fadeIn 0.25s ease-out;
 }
-
 
 #cartItems {
   list-style: none;
   padding-left: 0;
-  margin: 1rem 0;
+  margin: 1rem 0 0.5rem;
 }
 
 #cartItems li {
   display: flex;
-  justify-content: space-between;
+  gap: .75rem;
   align-items: center;
+  justify-content: space-between;
   padding: 0.5rem 0;
-  border-bottom: 1px solid var(--divider);
+  border-bottom: 1px solid color-mix(in srgb, var(--detritus-green) 25%, transparent);
 }
 
 #cartItems li:last-child {
@@ -294,9 +294,48 @@ footer .copyright {
   margin-top: 1rem;
 }
 
+/* Buttons INSIDE the modal = Lime Lift + Detritus Green */
+.cart-modal .btn,
+#cartItems .btn {
+  background: var(--lime-lift);           /* ✅ Lime Lift button background */
+  color: var(--detritus-green);           /* ✅ Detritus Green text */
+  border: 2px solid var(--detritus-green);
+  padding: .45rem .8rem;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: transform .05s, background-color .15s;
+}
+
+.cart-modal .btn:hover,
+#cartItems .btn:hover {
+  background: color-mix(in srgb, var(--lime-lift) 85%, var(--endurance-white) 15%);
+}
+
+.cart-modal .btn:active,
+#cartItems .btn:active {
+  transform: translateY(1px);
+}
+
+.cart-modal .btn:focus-visible,
+#cartItems .btn:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--detritus-green) 60%, white 40%);
+  outline-offset: 2px;
+}
+
+/* Remove button variant */
+.remove-btn {
+  background: var(--lime-lift);
+  color: var(--detritus-green);
+  border: 2px solid var(--detritus-green);
+  padding: .25rem .5rem;
+  line-height: 1;
+  border-radius: .4rem;
+}
+
+/* Subtle entrance animation */
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
 
@@ -309,6 +348,7 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
 
 
 
