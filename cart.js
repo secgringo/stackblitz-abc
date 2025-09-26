@@ -48,6 +48,9 @@ function addToCart(itemName) {
   }
   saveCart();
   displayCart();
+
+  // ✅ Confirmation message
+  alert(`${itemName} has been added to your cart!`);
 }
 
 // Clear cart
@@ -105,3 +108,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
