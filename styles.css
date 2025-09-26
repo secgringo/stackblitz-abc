@@ -235,10 +235,11 @@ footer .social a:hover{ text-decoration:underline }
 footer .copyright {
   display: block;         /* make sure it takes full width */
   width: 100%;            /* span footer width */
-  text-align: center;     /* center the text */
+  text-align: center !important;  /* center the text */
   margin-top: 0.75rem;    /* spacing above */
   font-size: 0.9rem;      /* slightly smaller */
   opacity: 0.9;           /* soften it */
+text-align: center !important;
 }
 
 
@@ -272,5 +273,6 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
 
 
