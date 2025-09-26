@@ -1,6 +1,5 @@
 // cart.js
 
-// Retrieve cart from localStorage safely
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 function saveCart() {
@@ -32,13 +31,15 @@ function changeQuantity(productId, delta) {
       removeFromCart(productId);
     } else {
       saveCart();
+      displayCart();
     }
-    displayCart();
   }
 }
 
 function displayCart() {
   const cartContainer = document.getElementById("cart");
+  if (!cartContainer) return;
+
   cartContainer.innerHTML = "";
   if (cart.length === 0) {
     cartContainer.innerHTML = "<p>Your cart is empty.</p>";

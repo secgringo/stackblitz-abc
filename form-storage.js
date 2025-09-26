@@ -17,11 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // Optional: clear localStorage on form submit
   const form = document.querySelector("form");
   if (form) {
-    form.addEventListener("submit", (e) => {
-      // Example validation: check if fields are not empty
+    form.addEventListener("submit", e => {
       let valid = true;
       fields.forEach(id => {
         const value = document.getElementById(id)?.value.trim();
