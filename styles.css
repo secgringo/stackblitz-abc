@@ -48,34 +48,110 @@ body{
 .container{max-width:1000px;margin-inline:auto;padding:1rem}
 section{padding:2rem 1rem}
 
-/* Header */
-header{
+/* ===========================
+   HEADER STYLES
+   =========================== */
+header {
   background: var(--brand);
   color: var(--endurance-white);
   box-shadow: 0 2px 8px var(--shadow);
-}
-header .header-left,
-header .header-center,
-header .header-right{
-  display:flex; align-items:center; gap:.75rem;
-}
-header{
-  display:flex; align-items:center; justify-content:space-between;
-  padding: .75rem 1rem;
-}
-.header-left img{height:42px;width:auto}
-.site-title{font-size:1.125rem;font-weight:700}
 
-.header-center ul{list-style:none;display:flex;gap:1rem;flex-wrap:wrap}
-.header-center a{
-  color: var(--endurance-white);
-  text-decoration:none; padding:.25rem .5rem; border-radius:.375rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* logo left, nav centered, cart (if any) right */
+  padding: 0.75rem 1rem;
 }
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.header-left img {
+  height: 42px;
+  width: auto;
+}
+
+.site-title {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.header-center {
+  flex: 1; /* ensures nav takes space so it can be centered */
+  display: flex;
+  justify-content: center;
+}
+
+.header-center ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.header-center a {
+  color: var(--endurance-white);
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.375rem;
+}
+
 .header-center a:hover,
-.header-center a:focus-visible{
+.header-center a:focus-visible {
   background: color-mix(in srgb, var(--endurance-white) 14%, transparent);
   outline: none;
 }
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-btn {
+  background: transparent;
+  color: var(--endurance-white);
+  border: 2px solid color-mix(in srgb, var(--endurance-white) 60%, transparent);
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.cart-btn:hover,
+.cart-btn:focus-visible {
+  background: color-mix(in srgb, var(--endurance-white) 12%, transparent);
+  outline: 2px solid var(--endurance-white);
+  outline-offset: 2px;
+}
+
+/* Responsive Header */
+@media (max-width: 800px) {
+  header {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .header-center {
+    order: 3; /* moves nav below logo/cart on small screens */
+    width: 100%;
+    justify-content: center;
+  }
+
+  .header-center ul {
+    justify-content: center;
+  }
+}
+
 
 .cart-btn{
   background: transparent;
@@ -205,3 +281,4 @@ a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
   .header-left{ width:100%; justify-content:center }
   .header-right{ width:100%; justify-content:center }
 }
+
