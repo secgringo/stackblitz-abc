@@ -12,7 +12,7 @@
 
   /* Semantic tokens */
   --bg:              var(--endurance-white);
-  --text:            var(--brisk-blue);
+  --text:            var(--detritus-green);
   --brand:           var(--brisk-blue);
   --accent:          var(--intensity-indigo);
   --accent-soft:     var(--aqua-pulse);
@@ -309,6 +309,7 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
 
 
 
