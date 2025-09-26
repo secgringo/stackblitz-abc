@@ -24,9 +24,9 @@ function displayCart() {
     li.textContent = `${item.name} (x${item.quantity})`;
 
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "❌";
-    removeBtn.classList.add("btn");
-    removeBtn.style.marginLeft = "0.5rem";
+    removeBtn.textContent = "×";            // ← neutral glyph (not a red emoji)
+    removeBtn.classList.add("btn", "remove-btn");
+    removeBtn.setAttribute("aria-label", `Remove ${item.name} from cart`);
     removeBtn.onclick = () => {
       cart.splice(index, 1);
       saveCart();
@@ -36,7 +36,7 @@ function displayCart() {
     li.appendChild(removeBtn);
     cartItems.appendChild(li);
   });
-}
+
 
 // Add item to cart
 function addToCart(itemName) {
@@ -108,4 +108,5 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
 
