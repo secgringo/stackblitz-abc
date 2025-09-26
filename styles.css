@@ -246,23 +246,59 @@ text-align: center !important;
 /* ===========================
    CART MODAL
    =========================== */
-.cart-modal{
-  position:fixed; inset:0;
-  background: var(--overlay);
-  display:flex; align-items:center; justify-content:center;
-  padding: 1rem;
+/* Cart Modal */
+.cart-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6); /* slightly darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
   z-index: 1000;
 }
-.modal-content{
+
+.modal-content {
   background: var(--surface);
   color: var(--text);
-  border-radius: .75rem;
-  max-width: 720px; width: 100%;
-  padding: 1rem;
-  box-shadow: 0 10px 30px var(--shadow);
+  border-radius: 12px;
+  max-width: 500px;
+  width: 90%;
+  padding: 1.5rem;
+  box-shadow: 0 10px 25px var(--shadow);
   border: 1px solid var(--divider);
+  animation: fadeIn 0.3s ease-in-out;
 }
-.cart-actions{ display:flex; gap:.5rem; margin-top: .75rem; flex-wrap:wrap }
+
+#cartItems {
+  list-style: none;
+  padding-left: 0;
+  margin: 1rem 0;
+}
+
+#cartItems li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--divider);
+}
+
+#cartItems li:last-child {
+  border-bottom: none;
+}
+
+.cart-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 
 /* ===========================
    TYPOGRAPHY
@@ -273,6 +309,7 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
 
 
 
