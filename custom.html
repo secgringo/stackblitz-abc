@@ -3,42 +3,76 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Customize | Stackblitz ABC</title>
+  <title>Community | ABC Fitness Studio</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <header>
-    <h1>Customize</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a href="custom.html">Customize</a>
-      <button id="dark-mode-toggle">Toggle Dark Mode</button>
-    </nav>
-  </header>
 
-  <main class="container">
-    <h2>Customize Your Product</h2>
-    <form id="customForm">
-      <label for="name">Name:</label>
-      <input type="text" id="name" name="name" required />
+<header>
+  <div class="header-left">
+    <img src="logo.png" alt="ABC Fitness Studio Logo" />
+    <h1 class="site-title">ABC Fitness Studio</h1>
+  </div>
+  <nav class="header-center">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="custom.html">Community</a></li>
+    </ul>
+  </nav>
+  <div class="header-right">
+    <button id="viewCartBtn" class="cart-btn">🛒 View Cart</button>
+    <button id="dark-mode-toggle" class="btn">🌓</button>
+  </div>
+</header>
 
-      <label for="email">Email:</label>
-      <input type="email" id="email" name="email" required />
+<main>
+  <section class="bg-aqua">
+    <h1>Community Involvement</h1>
+    <p>We partner with local schools, charities, and health organizations to promote wellness for all.</p>
+  </section>
 
-      <label for="message">Customization Details:</label>
-      <textarea id="message" name="message" rows="4" required></textarea>
+  <section class="bg-white">
+    <h2>Customer Testimonials</h2>
+    <div class="card-row">
+      <div class="card lime">
+        <h3>Mona S.</h3>
+        <p>"ABC Fitness changed my life! I lost 25lbs and gained extreme confidence."</p>
+        <img src="Client2_IndividualPilates.png" alt="Pilates Classes" />
+      </div>
+      <div class="card aqua">
+        <h3>Heather B.</h3>
+        <p>"The trainers here are stellar. The classes are exhilarating and results driven."</p>
+        <img src="Client2_GroupKickboxing.png" alt="Kickboxing Classes" />
+      </div>
+    </div>
+  </section>
 
-      <button type="submit" class="btn">Submit</button>
-    </form>
-  </main>
+  <section class="bg-lime">
+    <h2>Upcoming Events</h2>
+    <ul>
+      <li>April 15: Free Yoga in the Park</li>
+      <li>May 5: Nutrition Workshop</li>
+      <li>June 10: Charity Walk</li>
+    </ul>
+  </section>
+</main>
 
-  <footer>
-    <p>&copy; 2025 Stackblitz ABC</p>
-  </footer>
+<footer>
+  <p>&copy; 2025 ABC Fitness Studio</p>
+  <form>
+    <label for="newsletter">Subscribe:</label>
+    <input type="email" id="newsletter" placeholder="Enter your email" />
+    <button type="submit" class="btn">Subscribe</button>
+  </form>
+  <div class="social">
+    <a href="#">Facebook</a> |
+    <a href="#">Instagram</a> |
+    <a href="#">X</a>
+  </div>
+</footer>
 
-  <script src="form-storage.js"></script>
-  <script src="script.js"></script>
 </body>
 </html>
