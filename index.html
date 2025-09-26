@@ -2,84 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ABC Fitness Studio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | Stackblitz ABC</title>
   <link rel="stylesheet" href="styles.css" />
-  <script src="script.js" defer></script>
-
 </head>
 <body>
+  <header>
+    <h1>Stackblitz ABC</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="gallery.html">Gallery</a>
+      <a href="custom.html">Customize</a>
+      <button id="dark-mode-toggle">Toggle Dark Mode</button>
+    </nav>
+  </header>
 
-<header>
-  <div class="header-left">
-    <img src="logo.png" alt="ABC Fitness Studio Logo" />
-    <h1 class="site-title">ABC Fitness Studio</h1>
-  </div>
-  <nav class="header-center">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="custom.html">Community</a></li>
-    </ul>
-  </nav>
-  <div class="header-right">
-    <button id="viewCartBtn" class="cart-btn">🛒 View Cart</button>
-  </div>
-</header>
+  <main class="container">
+    <h2>Welcome!</h2>
+    <p>This is a homepage for the Stackblitz ABC project. Explore the site using the navigation above.</p>
+  </main>
 
+  <footer>
+    <p>&copy; 2025 Stackblitz ABC</p>
+  </footer>
 
-
-<section class="bg-white">
-  <h1>Welcome to ABC Fitness Studio</h1>
-  <p>Your journey to fitness starts here. Explore our programs, trainers, and success stories.</p>
-</section>
-
-<section class="bg-lime">
-  <h2>Programs That Fit You</h2>
-  <div class="card-row">
-    <div class="card lime">
-      <h3>Strength Training</h3>
-      <p>Build power and endurance with personalized training plans.</p>
-      <img src="StrengthTraining.png" alt="Strength Training" />
-    </div>
-    <div class="card aqua">
-      <h3>Cardio Blast</h3>
-      <p>High-energy sessions designed to boost your heart health.</p>
-      <img src="CardioBlast.png" alt="Cardio Workout" />
-    </div>
-  </div>
-</section>
-
-<section class="bg-aqua">
-  <h2>Why Choose Us?</h2>
-  <div class="card-row">
-    <div class="card white">
-      <h3>Expert Trainers</h3>
-      <p>Our certified trainers craft customized programs just for you.</p>
-      <img src="ExpertTrainer.png" alt="Expert Trainers" />
-    </div>
-    <div class="card lime">
-      <h3>Modern Equipment</h3>
-      <p>Train with the latest machines and tools in our upgraded facility.</p>
-      <img src="ModernEquipment.png" alt="Modern Equipment" />
-    </div>
-  </div>
-</section>
-
-<footer>
-  <p>&copy; 2025 ABC Fitness Studio</p>
-  <form>
-    <label for="newsletter">Subscribe:</label>
-    <input type="email" id="newsletter" placeholder="Enter your email">
-    <button type="submit">Subscribe</button>
-  </form>
-  <div class="social">
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">X</a>
-  </div>
-</footer>
-
+  <script src="script.js"></script>
 </body>
 </html>
