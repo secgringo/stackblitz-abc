@@ -205,27 +205,3 @@ a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
   .header-left{ width:100%; justify-content:center }
   .header-right{ width:100%; justify-content:center }
 }
-
-/* Dark Mode — all still derived from brand tokens */
-.dark-mode{
-  --bg:             var(--detritus-green);
-  --text:           var(--endurance-white);
-  --surface:        color-mix(in srgb, var(--detritus-green) 85%, var(--brisk-blue) 15%);
-  --surface-alt:    color-mix(in srgb, var(--detritus-green) 78%, var(--aqua-pulse) 22%);
-  --surface-soft:   color-mix(in srgb, var(--detritus-green) 78%, var(--lime-lift) 22%);
-  --divider:        color-mix(in srgb, var(--endurance-white) 22%, transparent);
-  --shadow:         color-mix(in srgb, var(--endurance-white) 14%, transparent);
-  --overlay:        color-mix(in srgb, var(--detritus-green) 70%, transparent);
-}
-.dark-mode header, .dark-mode footer{
-  background: color-mix(in srgb, var(--detritus-green) 80%, var(--brisk-blue) 20%);
-}
-.dark-mode .header-center a{
-  color: var(--endurance-white);
-}
-.dark-mode .btn{
-  background: var(--accent);
-  color: var(--endurance-white);
-}
-.dark-mode a{ color: var(--aqua-pulse) }
-.dark-mode a:hover{ color: color-mix(in srgb, var(--aqua-pulse) 70%, var(--endurance-white) 30%) }
