@@ -239,7 +239,6 @@ footer .copyright {
   margin-top: 0.75rem;    /* spacing above */
   font-size: 0.9rem;      /* slightly smaller */
   opacity: 0.9;           /* soften it */
-text-align: center !important;
 }
 
 
@@ -309,6 +308,7 @@ h3{font-size:1.1rem}
 p{max-width:65ch}
 a{color: var(--accent)}
 a:hover{color: color-mix(in srgb, var(--accent) 70%, var(--aqua-pulse) 30%)}
+
 
 
 
