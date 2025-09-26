@@ -12,8 +12,9 @@
   --intensity-indigo:#2343BD;
   --aqua-pulse:      #91B9D2;
   --lime-lift:       #DEF479;
+  --detritus-green:  #00231C;
 
-  --text-color:      var(--brisk-blue);
+  --text-color:      var(--detritus-green);
   --secondary-color: var(--aqua-pulse);
 }
 
