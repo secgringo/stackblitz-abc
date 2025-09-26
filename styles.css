@@ -59,6 +59,20 @@ nav a:hover {
   color: white;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.gallery img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
 .cart-item {
   display: flex;
   justify-content: space-between;
