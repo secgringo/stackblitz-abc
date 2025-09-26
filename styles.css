@@ -93,4 +93,14 @@ nav a:hover {
     display: block;
     margin: 0.5rem 0;
   }
+  .dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+.dark-mode header,
+.dark-mode footer {
+  background-color: #1f1f1f;
+}
+
 }
