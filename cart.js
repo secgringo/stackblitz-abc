@@ -2,12 +2,10 @@
 
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-// Save cart to localStorage
 function saveCart() {
   localStorage.setItem("cart", JSON.stringify(cart));
 }
 
-// Display items in modal
 function displayCart() {
   const cartItems = document.getElementById("cartItems");
   if (!cartItems) return;
@@ -24,7 +22,7 @@ function displayCart() {
     li.textContent = `${item.name} (x${item.quantity})`;
 
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "×";            // ← neutral glyph (not a red emoji)
+    removeBtn.textContent = "×"; // neutral glyph
     removeBtn.classList.add("btn", "remove-btn");
     removeBtn.setAttribute("aria-label", `Remove ${item.name} from cart`);
     removeBtn.onclick = () => {
@@ -36,9 +34,8 @@ function displayCart() {
     li.appendChild(removeBtn);
     cartItems.appendChild(li);
   });
+}
 
-
-// Add item to cart
 function addToCart(itemName) {
   const existing = cart.find(i => i.name === itemName);
   if (existing) {
@@ -48,19 +45,15 @@ function addToCart(itemName) {
   }
   saveCart();
   displayCart();
-
-  // ✅ Confirmation message
   alert(`${itemName} has been added to your cart!`);
 }
 
-// Clear cart
 function clearCart() {
   cart = [];
   saveCart();
   displayCart();
 }
 
-// Process order
 function processOrder() {
   if (cart.length === 0) {
     alert("Your cart is empty!");
@@ -70,9 +63,7 @@ function processOrder() {
   clearCart();
 }
 
-// Attach events on DOM load
 document.addEventListener("DOMContentLoaded", () => {
-  // Wire up Add to Cart buttons
   document.querySelectorAll(".add-to-cart").forEach(btn => {
     btn.addEventListener("click", () => {
       const item = btn.getAttribute("data-item");
@@ -80,7 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   });
 
-  // View Cart modal
   const viewCartBtn = document.getElementById("viewCartBtn");
   const cartModal = document.getElementById("cartModal");
 
@@ -91,15 +81,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Clear cart button
   const clearCartBtn = document.getElementById("clearCartBtn");
   if (clearCartBtn) clearCartBtn.addEventListener("click", clearCart);
 
-  // Process order button
   const processOrderBtn = document.getElementById("processOrderBtn");
   if (processOrderBtn) processOrderBtn.addEventListener("click", processOrder);
 
-  // Close modal when clicking outside
   if (cartModal) {
     cartModal.addEventListener("click", e => {
       if (e.target === cartModal) {
@@ -108,5 +95,3 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-
-
