@@ -132,18 +132,43 @@ header {
 /* ---------------------------------
    CARDS
 ---------------------------------- */
-.card-row { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
 .card {
   flex: 1 1 280px;
-  background: #fff;
-  color: var(--text-color);
   border-radius: .75rem;
   padding: 1rem;
-  box-shadow: 0 4px 14px rgba(23, 37, 63, 0.2);
   text-align: center;
+  box-shadow: 0 4px 14px rgba(23, 37, 63, 0.2);
   border: 1px solid rgba(23, 37, 63, 0.2);
 }
-.card img { max-width: 100%; border-radius: .5rem; }
+
+/* ✅ Variants */
+.card.white {
+  background: #fff;
+  color: var(--brisk-blue);
+}
+
+.card.aqua {
+  background: var(--aqua-pulse);
+  color: var(--brisk-blue);
+}
+
+.card.lime {
+  background: var(--lime-lift);
+  color: var(--brisk-blue);
+}
+
+.card img {
+  max-width: 100%;
+  border-radius: .5rem;
+  margin-top: .75rem;
+}
 
 /* ---------------------------------
    TABLES
