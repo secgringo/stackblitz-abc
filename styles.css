@@ -204,6 +204,19 @@ thead th {
   color: var(--brisk-blue);
 }
 
+.gallery-table {
+  max-width: 600px;
+  margin: 0 auto; /* centers the table */
+  border-collapse: collapse;
+}
+.gallery-table th,
+.gallery-table td {
+  padding: 0.75rem;
+  text-align: center;
+}
+
+
+
 /* ---------------------------------
    FOOTER
 ---------------------------------- */
@@ -255,3 +268,4 @@ footer p.copyright {
   border: 2px solid var(--brisk-blue);
 }
 .remove-btn { padding:.25rem .5rem; border-radius:.4rem; }
+
