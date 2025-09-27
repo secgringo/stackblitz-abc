@@ -157,7 +157,7 @@ header .header-left .site-title {
 
 .card {
   flex: 1 1 280px;
-  max-width: 280px; /* mobile */
+  max-width: 280px;
   border-radius: .75rem;
   padding: 1rem;
   text-align: center;
@@ -165,15 +165,6 @@ header .header-left .site-title {
   border: 1px solid rgba(23, 37, 63, 0.2);
   transition: transform 0.2s, box-shadow 0.2s;
 }
-
-
-/* ✅ For testimonial images specifically */
-.card-row .card img {
-  max-width: 120px;
-  border-radius: 50%; /* circle style */
-  margin-bottom: 0.75rem;
-}
-
 
 /* Responsive card sizes */
 @media (min-width: 768px) {
@@ -191,7 +182,7 @@ header .header-left .site-title {
 
 .card img {
   max-width: 75%;
-  border-radius: .5rem;
+  border-radius: .5rem; /* ✅ rectangular with rounded corners */
   margin-top: .75rem;
 }
 
