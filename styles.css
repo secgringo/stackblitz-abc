@@ -167,12 +167,6 @@ header .header-left .site-title {
 }
 
 
-.card img {
-  max-width: 75%;
-  border-radius: .5rem;
-  margin-top: .75rem;
-}
-
 /* ✅ For testimonial images specifically */
 .card-row .card img {
   max-width: 120px;
