@@ -67,6 +67,21 @@ p {
   color: var(--secondary-color);
 }
 
+
+/* ---------------------------------
+   TEXT COLOR UTILITIES
+---------------------------------- */
+
+/* Brand colors as text options */
+.text-brisk { color: var(--brisk-blue) !important; }
+.text-indigo { color: var(--intensity-indigo) !important; }
+.text-aqua { color: var(--aqua-pulse) !important; }
+.text-lime { color: var(--lime-lift) !important; }
+.text-white { color: #fff !important; }
+
+
+
+
 /* ---------------------------------
    HEADER
 ---------------------------------- */
@@ -129,6 +144,8 @@ header {
 .bg-white { background: #fff; color: var(--brisk-blue); }
 .bg-aqua  { background: var(--aqua-pulse); color: var(--brisk-blue); }
 .bg-lime  { background: var(--lime-lift); color: var(--brisk-blue); }
+.bg-brisk { background: var(--brisk-blue); color: #fff;}
+
 
 /* ---------------------------------
    CARDS
