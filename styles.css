@@ -166,7 +166,6 @@ header .header-left .site-title {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Responsive card sizes */
 @media (min-width: 768px) {
   .card { max-width: 320px; }
 }
@@ -182,7 +181,7 @@ header .header-left .site-title {
 
 .card img {
   max-width: 75%;
-  border-radius: .5rem; /* ✅ rectangular with rounded corners */
+  border-radius: .5rem;
   margin-top: .75rem;
 }
 
@@ -230,7 +229,9 @@ table { width: 100%; border-collapse: collapse; }
   border-bottom: none;
 }
 
-/* Product grid for gallery */
+/* ---------------------------------
+   PRODUCT GRID (Gallery)
+---------------------------------- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -262,44 +263,6 @@ table { width: 100%; border-collapse: collapse; }
 .product-card p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
-}
-
-/* Table header */
-.gallery-table thead th {
-  background: var(--brisk-blue);
-  color: var(--endurance-white);
-  padding: 0.75rem;
-  text-align: center;
-  font-weight: bold;
-}
-
-/* Table cells */
-.gallery-table td {
-  padding: 0.75rem;
-  text-align: center;
-  border-bottom: 1px solid rgba(23, 37, 63, 0.15);
-}
-
-/* Alternating row colors with contrast */
-.gallery-table tbody tr:nth-child(odd) {
-  background: var(--lime-lift); /* ✅ Lime pop */
-  color: var(--brisk-blue);
-}
-
-.gallery-table tbody tr:nth-child(even) {
-  background: var(--endurance-white);
-  color: var(--brisk-blue);
-}
-
-/* Remove border under last row */
-.gallery-table tbody tr:last-child td {
-  border-bottom: none;
-}
-
-/* Feedback form */
-.form-container {
-  max-width: 600px;
-  margin: 0 auto;
 }
 
 /* ---------------------------------
@@ -348,7 +311,6 @@ footer p.copyright {
 #cartItems li { display:flex; justify-content:space-between; align-items:center; padding:.5rem 0; }
 .cart-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:1rem; }
 
-/* ✅ cart buttons to Endurance White */
 .cart-modal .btn,
 #cartItems .btn {
   background: var(--endurance-white);
