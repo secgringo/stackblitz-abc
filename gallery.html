@@ -26,18 +26,12 @@
   <main class="container">
     <section class="bg-aqua">
       <h1 class="text-brisk">Shop and Sign</h1>
-      <p class="body">
-        Browse our selection of fitness class offerings. Maybe you just want
-        to purchase some of our dynamic branded products.
-      </p>
+      <p class="body">Browse our selection of fitness class offerings. Maybe you just want to purchase some of our dynamic branded products.</p>
 
-      <!-- ✅ Moved View Cart button here -->
-      <div class="cart-btn-container">
-        <button id="viewCartBtn" class="cart-btn">View Cart</button>
-      </div>
+      <button id="viewCartBtn" class="cart-btn">View Cart</button>
 
-      <!-- ✅ Product Grid -->
       <div class="product-grid">
+        <!-- ✅ Product Cards -->
         <div class="product-card">
           <img src="cartyogamat.png" alt="Yoga Mat" />
           <h3>Yoga Mat</h3>
@@ -60,7 +54,7 @@
         </div>
 
         <div class="product-card">
-          <img src="cartgroupkickboxing.png" alt="Group Kickboxing Classes" />
+          <img src="cartgroupkickbox.png" alt="Group Kickboxing" />
           <h3>Group Kickboxing</h3>
           <p>Join others of like mind and spirit!</p>
           <button class="btn add-to-cart" data-item="Group Kickboxing">Add to Cart</button>
@@ -104,8 +98,7 @@
     </section>
   </main>
 
-  <!-- ✅ Cart Modal -->
-  <div id="cartModal" class="cart-modal" style="display: none;">
+  <div id="cartModal" class="cart-modal">
     <div class="modal-content">
       <h2 class="text-brisk">Your Shopping Cart</h2>
       <ul id="cartItems"></ul>
@@ -117,7 +110,7 @@
   </div>
 
   <footer>
-    <form>
+    <form class="newsletter">
       <label for="newsletter">Subscribe:</label>
       <input type="email" id="newsletter" placeholder="Enter your email" required />
       <button type="submit" class="btn">Subscribe</button>
@@ -127,10 +120,7 @@
       <a href="#">Instagram</a> |
       <a href="#">X</a>
     </div>
-
     <p class="copyright">&copy; 2025 ABC Fitness Studio</p>
-
-    <!-- ✅ Footer Navigation -->
     <nav class="footer-nav">
       <a href="index.html">Home</a> |
       <a href="about.html">About</a> |
