@@ -3,9 +3,10 @@ document.addEventListener("DOMContentLoaded", () => {
   const cartModal = document.getElementById("cartModal");
   const closeCartBtn = document.getElementById("closeCartBtn");
   const checkoutBtn = document.getElementById("checkoutBtn");
+  const clearCartBtn = document.getElementById("clearCartBtn");
   const cartItemsList = document.getElementById("cartItems");
 
-  let cart = JSON.parse(localStorage.getItem("cart")) || [];
+  let cart = [];
 
   // ✅ Open modal
   viewCartBtn?.addEventListener("click", () => {
@@ -30,9 +31,8 @@ document.addEventListener("DOMContentLoaded", () => {
     btn.addEventListener("click", () => {
       const item = btn.getAttribute("data-item");
       cart.push(item);
-      saveCart();
       renderCart();
-      showToast(`${item} added to cart!`);
+      alert(`${item} added to cart!`);
     });
   });
 
@@ -52,7 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
       removeBtn.classList.add("btn", "remove-btn");
       removeBtn.addEventListener("click", () => {
         cart.splice(index, 1);
-        saveCart();
         renderCart();
       });
 
@@ -64,37 +63,26 @@ document.addEventListener("DOMContentLoaded", () => {
   // ✅ Checkout
   checkoutBtn?.addEventListener("click", () => {
     if (cart.length === 0) {
-      showToast("Your cart is empty!");
+      alert("Your cart is empty!");
       return;
     }
-    showToast("Proceeding to checkout...");
+    alert("Proceeding to checkout...");
     cart = [];
-    saveCart();
     renderCart();
     cartModal.style.display = "none";
   });
 
-  // ✅ Save to localStorage
-  function saveCart() {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  }
-
-  // ✅ Toast notification (replaces alerts)
-  function showToast(message) {
-    const toast = document.createElement("div");
-    toast.textContent = message;
-    toast.className = "toast";
-    document.body.appendChild(toast);
-
-    setTimeout(() => {
-      toast.classList.add("show");
-    }, 10);
-
-    setTimeout(() => {
-      toast.classList.remove("show");
-      setTimeout(() => toast.remove(), 300);
-    }, 2500);
-  }
+  // ✅ Clear Cart
+  clearCartBtn?.addEventListener("click", () => {
+    if (cart.length === 0) {
+      alert("Your cart is already empty!");
+      return;
+    }
+    if (confirm("Are you sure you want to clear the entire cart?")) {
+      cart = [];
+      renderCart();
+    }
+  });
 
   // ✅ Initial render
   renderCart();
