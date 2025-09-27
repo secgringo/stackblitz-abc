@@ -207,7 +207,10 @@ footer input[type="email"] {
   padding:.5rem .6rem; border-radius:.4rem; min-width:240px;
 }
 footer .social a { color: var(--endurance-white); margin: 0 .25rem; }
-footer .copyright { margin-top: .75rem; }
+footer .copyright {
+  margin-top: .75rem;
+  color: var(--endurance-white) !important; /* force white */
+}
 
 /* ---------------------------------
    CART MODAL
