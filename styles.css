@@ -287,6 +287,21 @@ footer a {
   }
 }
 
+.remove-btn {
+  margin-left: 1rem;
+  background: var(--lime-lift);
+  color: var(--detritus-green);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.remove-btn:hover {
+  background: var(--intensity-indigo);
+  color: var(--endurance-white);
+}
+
 /* ---------------------------------
    CART MODAL
 ---------------------------------- */
@@ -309,62 +324,18 @@ footer a {
   border-radius: 0.75rem;
   width: 90%;
   max-width: 500px;
-  text-align: left; /* ✅ align text to left */
+  text-align: left; /* ✅ align text left */
   color: var(--detritus-green);
 }
 
 /* ✅ Cart item list styling */
 #cartItems {
-  list-style-position: inside; /* keep bullets inside */
-  padding-left: 1rem; /* adds space from modal edge */
+  list-style-position: inside; /* bullets inside */
+  padding-left: 1rem; /* indent from modal edge */
   margin: 1rem 0;
 }
 
 #cartItems li {
   margin-bottom: 0.5rem;
+  text-align: left; /* ensure list items left aligned */
 }
-
-.cart-actions {
-  margin-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-}
-
-.remove-btn {
-  margin-left: 1rem;
-  background: var(--lime-lift);
-  color: var(--detritus-green);
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-}
-
-.remove-btn:hover {
-  background: var(--intensity-indigo);
-  color: var(--endurance-white);
-}
-
-/* ---------------------------------
-   TOAST NOTIFICATIONS
----------------------------------- */
-.toast {
-  position: fixed;
-  bottom: 20px;
-  left: 50%;
-  transform: translateX(-50%) translateY(50px);
-  background: var(--brisk-blue);
-  color: var(--endurance-white);
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  opacity: 0;
-  pointer-events: none;
-  transition: all 0.3s ease;
-  z-index: 2000;
-}
-
-.toast.show {
-  opacity: 1;
-  transform: translateX(-50%) translateY(0);
-}
-
