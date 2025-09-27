@@ -329,6 +329,27 @@ footer a {
   padding: 0.25rem 0.5rem;
 }
 
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: var(--brisk-blue);
+  color: var(--endurance-white);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+  z-index: 2000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+
 .remove-btn:hover {
   background: var(--intensity-indigo);
   color: var(--endurance-white);
