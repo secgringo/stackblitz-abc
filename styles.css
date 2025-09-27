@@ -90,7 +90,7 @@ header {
 }
 .header-left { display: flex; align-items: center; gap: 0.75rem; }
 .header-left img { height: 42px; width: auto; }
-.site-title { font-size: 1.125rem; font-weight: 700; }
+.site-title { font-size: 1.125rem; font-weight: 700; color: var(--endurance-white) !important; }
 .header-center { flex: 1; display: flex; justify-content: center; }
 .header-center ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
 .header-center a {
