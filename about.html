@@ -62,6 +62,17 @@
     </section>
   </main>
 
+  <!-- ✅ Feedback Confirmation Modal -->
+  <div id="feedbackModal" class="cart-modal" style="display: none;">
+    <div class="modal-content">
+      <h2 class="text-brisk">Thank you!</h2>
+      <p id="feedbackMessage"></p>
+      <div class="cart-actions">
+        <button id="closeFeedbackBtn" class="btn">Close</button>
+      </div>
+    </div>
+  </div>
+
   <footer>
     <form>
       <label for="newsletter">Subscribe:</label>
@@ -81,5 +92,33 @@
       <a href="custom.html">Custom</a>
     </div>
   </footer>
+
+  <!-- ✅ Feedback Modal Script -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.querySelector(".feedback-form");
+      const modal = document.getElementById("feedbackModal");
+      const message = document.getElementById("feedbackMessage");
+      const closeBtn = document.getElementById("closeFeedbackBtn");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault(); // stop normal submit
+        const name = document.getElementById("name").value;
+        message.textContent = `Thanks, ${name}, for sharing your feedback!`;
+        modal.style.display = "flex";
+        form.reset(); // clear the form
+      });
+
+      closeBtn.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
 </body>
 </html>
