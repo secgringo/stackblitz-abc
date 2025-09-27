@@ -240,6 +240,8 @@ table { width: 100%; border-collapse: collapse; }
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(23, 37, 63, 0.15);
 }
+
+/* Table header */
 .gallery-table thead th {
   background: var(--brisk-blue);
   color: var(--endurance-white);
@@ -247,19 +249,26 @@ table { width: 100%; border-collapse: collapse; }
   text-align: center;
   font-weight: bold;
 }
+
+/* Table cells */
 .gallery-table td {
   padding: 0.75rem;
   text-align: center;
   border-bottom: 1px solid rgba(23, 37, 63, 0.15);
 }
+
+/* Alternating row colors with contrast */
 .gallery-table tbody tr:nth-child(odd) {
-  background: var(--aqua-pulse);
+  background: var(--lime-lift); /* ✅ Lime pop */
   color: var(--brisk-blue);
 }
+
 .gallery-table tbody tr:nth-child(even) {
   background: var(--endurance-white);
   color: var(--brisk-blue);
 }
+
+/* Remove border under last row */
 .gallery-table tbody tr:last-child td {
   border-bottom: none;
 }
