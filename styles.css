@@ -52,7 +52,7 @@ h3 {
   font-family: 'Comfortaa', cursive;
   font-weight: 400;
   font-size: 18px;
-  color: var(--secondary-color);
+  color: var(--secondary-color); /* Aqua Pulse by default */
 }
 p {
   font-family: Calibri, sans-serif;
@@ -67,17 +67,14 @@ p {
   color: var(--secondary-color);
 }
 
-
 /* ---------------------------------
-   TEXT COLOR UTILITIES
+   TEXT COLOR UTILITIES (force override)
 ---------------------------------- */
-.text-brisk { color: var(--brisk-blue) !important; }
+.text-brisk  { color: var(--brisk-blue) !important; }
 .text-indigo { color: var(--intensity-indigo) !important; }
-.text-aqua { color: var(--aqua-pulse) !important; }
-.text-lime { color: var(--lime-lift) !important; }
-.text-white { color: var(--endurance-white) !important; }
-
-
+.text-aqua   { color: var(--aqua-pulse) !important; }
+.text-lime   { color: var(--lime-lift) !important; }
+.text-white  { color: var(--endurance-white) !important; }
 
 /* ---------------------------------
    HEADER
@@ -132,16 +129,18 @@ header {
   padding: .55rem 1rem;
   border-radius: .5rem;
   cursor: pointer;
+  transition: background-color .15s ease, transform .05s ease;
 }
 .btn:hover { background: color-mix(in srgb, var(--intensity-indigo) 85%, var(--brisk-blue) 15%); }
+.btn:active { transform: translateY(1px); }
 
 /* ---------------------------------
    SECTIONS
 ---------------------------------- */
 .bg-white { background: var(--endurance-white); color: var(--brisk-blue); }
-.bg-aqua  { background: var(--aqua-pulse); color: var(--brisk-blue); }
-.bg-lime  { background: var(--lime-lift); color: var(--brisk-blue); }
-.bg-brisk { background: var(--brisk-blue); color: var(--endurance-white); }
+.bg-aqua  { background: var(--aqua-pulse);     color: var(--brisk-blue); }
+.bg-lime  { background: var(--lime-lift);      color: var(--brisk-blue); }
+.bg-brisk { background: var(--brisk-blue);     color: var(--endurance-white); }
 
 /* ---------------------------------
    CARDS
@@ -163,22 +162,11 @@ header {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
-.card.white {
-  background: var(--endurance-white);
-  color: var(--brisk-blue);
-}
-.card.aqua {
-  background: var(--aqua-pulse);
-  color: var(--brisk-blue);
-}
-.card.lime {
-  background: var(--lime-lift);
-  color: var(--brisk-blue);
-}
-.card.brisk {
-  background: var(--brisk-blue);
-  color: var(--endurance-white);
-}
+/* Variants */
+.card.white { background: var(--endurance-white); color: var(--brisk-blue); }
+.card.aqua  { background: var(--aqua-pulse);     color: var(--brisk-blue); }
+.card.lime  { background: var(--lime-lift);      color: var(--brisk-blue); }
+.card.brisk { background: var(--brisk-blue);     color: var(--endurance-white); }
 
 .card img {
   max-width: 75%;
@@ -239,7 +227,7 @@ footer .copyright { margin-top: .75rem; }
   padding: 1.5rem;
 }
 #cartItems { list-style:none; padding-left:0; margin:1rem 0; }
-#cartItems li { display:flex; justify-content:space-between; padding:.5rem 0; }
+#cartItems li { display:flex; justify-content:space-between; align-items:center; padding:.5rem 0; }
 .cart-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:1rem; }
 .cart-modal .btn, #cartItems .btn {
   background: var(--lime-lift);
