@@ -304,13 +304,24 @@ footer a {
 }
 
 .modal-content {
-  background: var(--aqua-pulse);
+  background: var(--endurance-white); /* ✅ white background */
   padding: 2rem;
   border-radius: 0.75rem;
   width: 90%;
   max-width: 500px;
-  text-align: center;
+  text-align: left; /* ✅ align text to left */
   color: var(--detritus-green);
+}
+
+/* ✅ Cart item list styling */
+#cartItems {
+  list-style-position: inside; /* keep bullets inside */
+  padding-left: 1rem; /* adds space from modal edge */
+  margin: 1rem 0;
+}
+
+#cartItems li {
+  margin-bottom: 0.5rem;
 }
 
 .cart-actions {
