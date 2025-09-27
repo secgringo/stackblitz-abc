@@ -166,6 +166,21 @@ header .header-left .site-title {
   transition: transform 0.2s, box-shadow 0.2s;
 }
 
+
+.card img {
+  max-width: 75%;
+  border-radius: .5rem;
+  margin-top: .75rem;
+}
+
+/* ✅ For testimonial images specifically */
+.card-row .card img {
+  max-width: 120px;
+  border-radius: 50%; /* circle style */
+  margin-bottom: 0.75rem;
+}
+
+
 /* Responsive card sizes */
 @media (min-width: 768px) {
   .card { max-width: 320px; }
