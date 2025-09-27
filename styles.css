@@ -293,7 +293,7 @@ footer a {
   border-radius: 0.75rem;
   width: 90%;
   max-width: 500px;
-  text-align: left; /* ✅ align left */
+  text-align: left;
   color: var(--detritus-green);
 }
 
@@ -314,17 +314,15 @@ footer a {
   justify-content: space-between;
 }
 
+/* ✅ Cart modal buttons styled Indigo */
+.cart-actions .btn,
 .remove-btn {
-  margin-left: 1rem;
-  background: var(--lime-lift);
-  color: var(--detritus-green);
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
+  background: var(--intensity-indigo);
+  color: var(--endurance-white);
 }
 
+.cart-actions .btn:hover,
 .remove-btn:hover {
-  background: var(--intensity-indigo);
+  background: var(--brisk-blue);
   color: var(--endurance-white);
 }
