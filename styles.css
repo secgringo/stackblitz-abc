@@ -1,10 +1,4 @@
 /* ---------------------------------
-   GOOGLE FONTS
----------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
-
-/* ---------------------------------
    ROOT VARIABLES
 ---------------------------------- */
 :root {
@@ -23,6 +17,9 @@
 /* ---------------------------------
    TYPOGRAPHY
 ---------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+
 /* Headings */
 .title-large { font-family: Arial, sans-serif; font-weight: 700; font-size: 30px; color: var(--text-color); }
 .title { font-family: Arial, sans-serif; font-weight: 700; font-size: 25px; color: var(--text-color); }
@@ -96,10 +93,10 @@ main.container {
 
 section {
   padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
   margin-bottom: 2rem;
 }
 
-/* Background helpers */
 .bg-white { background: var(--endurance-white); }
 .bg-brisk { background: var(--brisk-blue); }
 .bg-aqua { background: var(--aqua-pulse); }
@@ -114,8 +111,7 @@ footer {
 }
 
 footer .social {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+  margin: 1rem 0;
 }
 
 footer a {
@@ -190,7 +186,7 @@ footer a {
 }
 
 /* ---------------------------------
-   Event Section
+   EVENT SECTION
 ---------------------------------- */
 .events-section ul {
   list-style: disc;
@@ -200,7 +196,7 @@ footer a {
 }
 
 /* ---------------------------------
-   Hours Table
+   HOURS TABLE
 ---------------------------------- */
 .hours-table {
   width: 80%;
@@ -222,13 +218,8 @@ footer a {
   border-bottom: 1px solid rgba(23, 37, 63, 0.2);
 }
 
-.hours-table tr:nth-child(even) {
-  background: var(--aqua-pulse);
-}
-
-.hours-table tr:nth-child(odd) {
-  background: var(--endurance-white);
-}
+.hours-table tr:nth-child(even) { background: var(--aqua-pulse); }
+.hours-table tr:nth-child(odd) { background: var(--endurance-white); }
 
 /* ---------------------------------
    PRODUCT GRID (Gallery)
@@ -270,36 +261,14 @@ footer a {
   color: var(--detritus-green);
 }
 
-.bg-aqua .body {
-  color: var(--detritus-green);
-}
+.bg-aqua .body { color: var(--detritus-green); }
 
-/* Responsive grid */
 @media (max-width: 992px) {
-  .product-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .product-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 600px) {
-  .product-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
-.remove-btn {
-  margin-left: 1rem;
-  background: var(--lime-lift);
-  color: var(--detritus-green);
-  border: none;
-  border-radius: 0.25rem;
-  cursor: pointer;
-  padding: 0.25rem 0.5rem;
-}
-
-.remove-btn:hover {
-  background: var(--intensity-indigo);
-  color: var(--endurance-white);
+  .product-grid { grid-template-columns: 1fr; }
 }
 
 /* ---------------------------------
@@ -324,18 +293,38 @@ footer a {
   border-radius: 0.75rem;
   width: 90%;
   max-width: 500px;
-  text-align: left; /* ✅ align text left */
+  text-align: left; /* ✅ align left */
   color: var(--detritus-green);
 }
 
-/* ✅ Cart item list styling */
 #cartItems {
-  list-style-position: inside; /* bullets inside */
-  padding-left: 1rem; /* indent from modal edge */
+  list-style-position: inside;
+  padding-left: 1rem;
   margin: 1rem 0;
 }
 
 #cartItems li {
   margin-bottom: 0.5rem;
-  text-align: left; /* ensure list items left aligned */
+  text-align: left;
+}
+
+.cart-actions {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.remove-btn {
+  margin-left: 1rem;
+  background: var(--lime-lift);
+  color: var(--detritus-green);
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+}
+
+.remove-btn:hover {
+  background: var(--intensity-indigo);
+  color: var(--endurance-white);
 }
