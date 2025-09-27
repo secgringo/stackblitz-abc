@@ -180,6 +180,16 @@ footer a {
 }
 
 
+/* ---------------------------------
+   Event Section
+---------------------------------- */
+.events-section ul {
+  list-style: disc;
+  margin: 1rem auto;
+  padding: 0 1.5rem;
+  max-width: 600px;
+}
+
 
 /* ---------------------------------
    Hours Table
