@@ -3,71 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Community | ABC Fitness Studio</title>
+  <title>Custom - ABC Fitness Studio</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-<header>
-  <div class="header-left">
-    <img src="logo.png" alt="ABC Fitness Studio Logo" />
-    <h1 class="site-title">ABC Fitness Studio</h1>
-  </div>
-  <nav class="header-center">
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="custom.html">Community</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-  <section class="bg-aqua">
-    <h1>Community Involvement</h1>
-    <p>We partner with local schools, charities, and health organizations to promote wellness for all.</p>
-  </section>
-
-  <section class="bg-white">
-    <h2>Customer Testimonials</h2>
-    <div class="card-row">
-      <div class="card lime text-brisk">
-        <h3 class="text-indigo">Mona S.</h3>
-        <p class="text-brisk">"ABC Fitness changed my life! I lost 25lbs and gained extreme confidence."</p>
-        <img src="Client2_IndividualPilates.png" alt="Pilates Classes" />
-      </div>
-      <div class="card aqua text-brisk">
-        <h3 class="text-indigo">Heather B.</h3>
-        <p class="text-brisk">"The trainers here are stellar. The classes are exhilarating and results driven."</p>
-        <img src="Client2_GroupKickboxing.png" alt="Kickboxing Classes" />
-      </div>
+  <header>
+    <div class="header-left">
+      <img src="logo.png" alt="ABC Fitness Studio Logo" />
+      <h1 class="site-title">ABC Fitness Studio</h1>
     </div>
-  </section>
+    <div class="header-center">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="custom.html">Custom</a></li>
+      </ul>
+    </div>
+  </header>
 
-  <section class="bg-lime">
-    <h2 class="text-brisk">Upcoming Events</h2>
-    <ul>
-      <li>April 15: Free Yoga in the Park</li>
-      <li>May 5: Nutrition Workshop</li>
-      <li>June 10: Charity Walk</li>
-    </ul>
-  </section>
-</main>
+  <main class="container">
+    <section class="bg-aqua">
+      <h1 class="text-brisk">Community Involvement</h1>
+      <p class="body">We love to give back to the community with events and workshops.</p>
+    </section>
 
-<footer>
-  <form>
-    <label for="newsletter">Subscribe:</label>
-    <input type="email" id="newsletter" placeholder="Enter your email" required />
-    <button type="submit" class="btn">Subscribe</button>
-  </form>
-  <div class="social">
-    <a href="#">Facebook</a> |
-    <a href="#">Instagram</a> |
-    <a href="#">X</a>
-  </div>
-  <p class="copyright">&copy; 2025 ABC Fitness Studio</p>
-</footer>
+    <section class="bg-lime">
+      <h2 class="text-brisk">Customer Testimonials</h2>
+      <div class="card-row">
+        <div class="card aqua">
+          <h3 class="text-brisk">Sarah L.</h3>
+          <p>"The trainers are knowledgeable and motivating. I feel stronger every week!"</p>
+        </div>
+        <div class="card lime">
+          <h3 class="text-brisk">James K.</h3>
+          <p>"The environment is welcoming and the equipment is top-notch."</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- ✅ Upcoming Events with new padding -->
+    <section class="bg-lime events-section">
+      <h2 class="text-brisk">Upcoming Events</h2>
+      <ul>
+        <li>Free Yoga Class - March 10</li>
+        <li>Nutrition Workshop - March 20</li>
+        <li>Strength Training Bootcamp - April 5</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <form>
+      <label for="newsletter">Subscribe:</label>
+      <input type="email" id="newsletter" placeholder="Enter your email" required />
+      <button type="submit" class="btn">Subscribe</button>
+    </form>
+    <div class="social">
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">X</a>
+    </div>
+    <p class="copyright">&copy; 2025 ABC Fitness Studio</p>
+  </footer>
 </body>
 </html>

@@ -52,7 +52,7 @@ h3 {
   font-family: 'Comfortaa', cursive;
   font-weight: 400;
   font-size: 18px;
-  color: var(--secondary-color); /* Aqua Pulse by default */
+  color: var(--secondary-color);
 }
 p {
   font-family: Calibri, sans-serif;
@@ -68,7 +68,7 @@ p {
 }
 
 /* ---------------------------------
-   TEXT COLOR UTILITIES (force override)
+   TEXT COLOR UTILITIES
 ---------------------------------- */
 .text-brisk  { color: var(--brisk-blue) !important; }
 .text-indigo { color: var(--intensity-indigo) !important; }
@@ -91,12 +91,9 @@ header {
 .header-left { display: flex; align-items: center; gap: 0.75rem; }
 .header-left img { height: 42px; width: auto; }
 .site-title { font-size: 1.125rem; font-weight: 700; }
-
-/* ✅ Force header site title white */
 header .header-left .site-title {
   color: var(--endurance-white) !important;
 }
-
 .header-center { flex: 1; display: flex; justify-content: center; }
 .header-center ul { list-style: none; display: flex; gap: 1rem; flex-wrap: wrap; }
 .header-center a {
@@ -160,7 +157,7 @@ header .header-left .site-title {
 
 .card {
   flex: 1 1 280px;
-  max-width: 280px; /* default mobile cap */
+  max-width: 280px; /* mobile */
   border-radius: .75rem;
   padding: 1rem;
   text-align: center;
@@ -204,9 +201,10 @@ thead th {
   color: var(--brisk-blue);
 }
 
+/* Gallery-specific table */
 .gallery-table {
   max-width: 600px;
-  margin: 0 auto; /* centers the table */
+  margin: 0 auto;
   border-collapse: collapse;
 }
 .gallery-table th,
@@ -215,7 +213,17 @@ thead th {
   text-align: center;
 }
 
+/* Business Hours table */
+.hours-table {
+  max-width: 500px;
+  margin: 0 auto;
+}
 
+/* Feedback form */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
 
 /* ---------------------------------
    FOOTER
@@ -237,7 +245,7 @@ footer input[type="email"] {
 footer .social a { color: var(--endurance-white); margin: 0 .25rem; }
 footer p.copyright {
   margin-top: .75rem;
-  color: var(--endurance-white) !important; /* ✅ locked white */
+  color: var(--endurance-white) !important;
   text-align: center !important;
   display: block !important;
 }
@@ -262,10 +270,20 @@ footer p.copyright {
 #cartItems { list-style:none; padding-left:0; margin:1rem 0; }
 #cartItems li { display:flex; justify-content:space-between; align-items:center; padding:.5rem 0; }
 .cart-actions { display:flex; justify-content:flex-end; gap:.5rem; margin-top:1rem; }
-.cart-modal .btn, #cartItems .btn {
-  background: var(--lime-lift);
+
+/* ✅ cart buttons to Endurance White */
+.cart-modal .btn,
+#cartItems .btn {
+  background: var(--endurance-white);
   color: var(--brisk-blue);
   border: 2px solid var(--brisk-blue);
 }
+
 .remove-btn { padding:.25rem .5rem; border-radius:.4rem; }
 
+/* ---------------------------------
+   EVENTS SECTION
+---------------------------------- */
+.events-section {
+  padding-left: 2rem;
+}
