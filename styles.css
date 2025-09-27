@@ -185,7 +185,7 @@ footer a {
 ---------------------------------- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* ✅ locked 3×3 on desktop */
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -207,15 +207,36 @@ footer a {
   margin-bottom: .75rem;
 }
 
+/* ✅ Product titles & descriptions Detritus Green */
 .product-card h3 {
   font-family: Arial, sans-serif;
   font-weight: bold;
   margin-bottom: 0.5rem;
+  color: var(--detritus-green);
 }
 
 .product-card p {
   font-size: 0.9rem;
   margin-bottom: 1rem;
+  color: var(--detritus-green);
+}
+
+/* ✅ Section intro text also Detritus Green */
+.bg-aqua .body {
+  color: var(--detritus-green);
+}
+
+/* ✅ Responsive grid */
+@media (max-width: 992px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ---------------------------------
