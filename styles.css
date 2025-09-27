@@ -209,7 +209,7 @@ footer a {
 }
 
 .hours-table tr:nth-child(odd) {
-  background: var(--lime-lift);
+  background: var(--endurance-white);
 }
 
 
