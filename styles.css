@@ -329,6 +329,14 @@ footer a {
   padding: 0.25rem 0.5rem;
 }
 
+.remove-btn:hover {
+  background: var(--intensity-indigo);
+  color: var(--endurance-white);
+}
+
+/* ---------------------------------
+   TOAST NOTIFICATIONS
+---------------------------------- */
 .toast {
   position: fixed;
   bottom: 20px;
@@ -349,8 +357,3 @@ footer a {
   transform: translateX(-50%) translateY(0);
 }
 
-
-.remove-btn:hover {
-  background: var(--intensity-indigo);
-  color: var(--endurance-white);
-}
