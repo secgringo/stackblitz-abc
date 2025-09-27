@@ -123,6 +123,22 @@ footer a {
   margin: 0 0.5rem;
 }
 
+.footer-nav {
+  margin-top: 1rem;
+}
+
+.footer-nav a {
+  color: var(--endurance-white);
+  text-decoration: none;
+  margin: 0 0.5rem;
+  font-weight: 600;
+}
+
+.footer-nav a:hover {
+  color: var(--lime-lift);
+}
+
+
 /* ---------------------------------
    BUTTONS
 ---------------------------------- */
