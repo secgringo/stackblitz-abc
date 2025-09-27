@@ -154,6 +154,7 @@ header {
 
 .card {
   flex: 1 1 280px;
+  max-width: 320px; /* ✅ cap width so cards don’t get too big */
   border-radius: .75rem;
   padding: 1rem;
   text-align: center;
@@ -207,13 +208,12 @@ footer input[type="email"] {
   padding:.5rem .6rem; border-radius:.4rem; min-width:240px;
 }
 footer .social a { color: var(--endurance-white); margin: 0 .25rem; }
-footer .copyright {
+footer p.copyright {
   margin-top: .75rem;
-  color: var(--endurance-white) !important;
+  color: var(--endurance-white) !important; /* ✅ locked white */
   text-align: center !important;
   display: block !important;
 }
-
 
 /* ---------------------------------
    CART MODAL
