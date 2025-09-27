@@ -1,4 +1,10 @@
 /* ---------------------------------
+   GOOGLE FONTS
+---------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
+
+/* ---------------------------------
    ROOT VARIABLES
 ---------------------------------- */
 :root {
@@ -17,9 +23,6 @@
 /* ---------------------------------
    TYPOGRAPHY
 ---------------------------------- */
-@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@400&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Calibri:wght@400;700&display=swap');
-
 /* Headings */
 .title-large { font-family: Arial, sans-serif; font-weight: 700; font-size: 30px; color: var(--text-color); }
 .title { font-family: Arial, sans-serif; font-weight: 700; font-size: 25px; color: var(--text-color); }
@@ -35,8 +38,6 @@
 
 /* Utility text colors */
 .text-brisk { color: var(--brisk-blue); }
-.text-aqua { color: var(--aqua-pulse); }
-.text-lime { color: var(--lime-lift); }
 .text-white { color: var(--endurance-white); }
 
 /* ---------------------------------
@@ -94,11 +95,11 @@ main.container {
 }
 
 section {
-  padding: 1.5rem 2rem; /* tighter: 1.5 top/bottom, 2 left/right */
-  border-radius: 0.5rem;
+  padding: 1.5rem 2rem;
   margin-bottom: 2rem;
 }
 
+/* Background helpers */
 .bg-white { background: var(--endurance-white); }
 .bg-brisk { background: var(--brisk-blue); }
 .bg-aqua { background: var(--aqua-pulse); }
@@ -138,7 +139,6 @@ footer a {
   color: var(--lime-lift);
 }
 
-
 /* ---------------------------------
    BUTTONS
 ---------------------------------- */
@@ -157,12 +157,6 @@ footer a {
   background: var(--intensity-indigo);
   color: var(--endurance-white);
   transform: scale(1.05);
-}
-
-/* Cart button placement */
-.cart-btn-container {
-  margin: 1rem 0;
-  text-align: left;
 }
 
 /* ---------------------------------
@@ -195,7 +189,6 @@ footer a {
   margin-top: .75rem;
 }
 
-
 /* ---------------------------------
    Event Section
 ---------------------------------- */
@@ -205,7 +198,6 @@ footer a {
   padding: 0 1.5rem;
   max-width: 600px;
 }
-
 
 /* ---------------------------------
    Hours Table
@@ -238,13 +230,12 @@ footer a {
   background: var(--endurance-white);
 }
 
-
 /* ---------------------------------
    PRODUCT GRID (Gallery)
 ---------------------------------- */
 .product-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* ✅ locked 3×3 on desktop */
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 1.5rem;
 }
@@ -266,7 +257,6 @@ footer a {
   margin-bottom: .75rem;
 }
 
-/* ✅ Product titles & descriptions Detritus Green */
 .product-card h3 {
   font-family: Arial, sans-serif;
   font-weight: bold;
@@ -280,12 +270,11 @@ footer a {
   color: var(--detritus-green);
 }
 
-/* ✅ Section intro text also Detritus Green */
 .bg-aqua .body {
   color: var(--detritus-green);
 }
 
-/* ✅ Responsive grid */
+/* Responsive grid */
 @media (max-width: 992px) {
   .product-grid {
     grid-template-columns: repeat(2, 1fr);
