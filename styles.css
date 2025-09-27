@@ -67,6 +67,18 @@ p {
   color: var(--secondary-color);
 }
 
+
+/* ---------------------------------
+   TEXT COLOR UTILITIES
+---------------------------------- */
+.text-brisk { color: var(--brisk-blue) !important; }
+.text-indigo { color: var(--intensity-indigo) !important; }
+.text-aqua { color: var(--aqua-pulse) !important; }
+.text-lime { color: var(--lime-lift) !important; }
+.text-white { color: var(--endurance-white) !important; }
+
+
+
 /* ---------------------------------
    HEADER
 ---------------------------------- */
