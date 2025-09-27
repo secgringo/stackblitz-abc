@@ -118,7 +118,7 @@ footer .social {
 }
 
 footer a {
-  color: var(--lime-lift);
+  color: var(--endurance-white);
   text-decoration: none;
   margin: 0 0.5rem;
 }
@@ -211,7 +211,6 @@ footer a {
 .hours-table tr:nth-child(odd) {
   background: var(--endurance-white);
 }
-
 
 
 /* ---------------------------------
