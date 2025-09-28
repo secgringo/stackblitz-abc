@@ -189,7 +189,7 @@ footer a {
    EVENT SECTION
 ---------------------------------- */
 .events-section ul {
-  list-style-position: inside;
+  list-style: none;
   margin: 1rem 0 0 0;
   padding-left: 0;     
   max-width: 600px;         
@@ -198,7 +198,7 @@ footer a {
 }
 
 .events-section li {
-   margin-bottom: 0.5rem;
+   margin-bottom: 0.75rem;
    line-height: 1.6;
    font-size: 1.2rem;
    position: relative;
@@ -210,7 +210,8 @@ footer a {
    content: "🏋️"; 
    position: absolute;
    left: 0;
-   top: 0;
+   top: 50%;
+   transform: translateY(-50%);
    font-size: 1.2rem;
    color: var(--intensity-indigo);
 }
@@ -439,5 +440,6 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
