@@ -188,48 +188,55 @@ footer a {
 /* ---------------------------------
    EVENT SECTION
 ---------------------------------- */
+/* ---------------------------------
+   EVENT SECTION
+---------------------------------- */
 .events-section ul {
-  list-style: none;              /* remove default bullets */
+  list-style: none;                 /* remove default bullets */
   margin: 1rem 0 0 0;
-  padding-left: 0;
-  max-width: 600px;
+  padding-left: 0;     
+  max-width: 600px;         
   color: var(--detritus-green);
   text-align: left;
 }
 
 .events-section li {
-  margin-bottom: 0.75rem;
-  line-height: 1.6;
-  font-size: 1.2rem;
-  position: relative;
-  padding-left: 2.5rem;          /* space for custom bullet */
+   margin-bottom: 0.75rem;
+   line-height: 1.6;
+   font-size: 1.2rem;
+   position: relative;              /* needed for custom bullets */
+   padding-left: 3rem;              /* space for barbell */
 }
 
-/* Bar (Indigo) */
+/* Custom Barbell Bullet */
 .events-section li::before {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;                   /* bar width */
-  height: 6px;                   /* bar thickness */
+  width: 26px;                      /* wider bar */
+  height: 8px;                      /* thicker bar */
   background: var(--intensity-indigo);
-  border-radius: 2px;
+  border-radius: 3px;
+  box-shadow: 0 0 6px rgba(35, 67, 189, 0.4); /* indigo glow */
 }
 
-/* Plates (Lime Lift) */
+/* Plates on each side */
 .events-section li::after {
   content: "";
   position: absolute;
-  left: -6px;                    /* left plate */
+  left: -12px;                      /* left plate position */
   top: 50%;
   transform: translateY(-50%);
-  width: 8px;
-  height: 8px;
-  background: var(--lime-lift);  /* ✅ plates = lime lift */
+  width: 14px;                      /* larger plates */
+  height: 14px;
+  background: var(--lime-lift);
   border-radius: 50%;
-  box-shadow: 22px 0 0 var(--lime-lift); /* right plate */
+  box-shadow: 
+    38px 0 0 var(--lime-lift),      /* right plate */
+    0 0 6px rgba(222, 244, 121, 0.6),  /* glow left plate */
+    38px 0 6px rgba(222, 244, 121, 0.6); /* glow right plate */
 }
 
 
@@ -457,6 +464,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
