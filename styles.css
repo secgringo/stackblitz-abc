@@ -208,7 +208,7 @@ footer a {
 /*  Custom Icon Bullet */
 .events-section li::before {
    content: "🏋️"; 
-   position: absolute:
+   position: absolute;
    left: 0;
    top: 0;
    font-size: 1.2rem;
@@ -439,3 +439,4 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
