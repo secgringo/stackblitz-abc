@@ -10,7 +10,7 @@
   --detritus-green: #00231C;
 
   --shadow: rgba(23, 37, 63, 0.2);
-  --text-color: var(--brisk-blue);
+  --text-color: var(--detritus-green);
   --secondary-color: var(--aqua-pulse);
 }
 
@@ -36,6 +36,10 @@
 /* Utility text colors */
 .text-brisk { color: var(--brisk-blue); }
 .text-white { color: var(--endurance-white); }
+.text-default {color: var(--detritus-green);}
+.text-lime { color: var(--lime-lift);}
+.text-aqua { color: var(--aqua-pulse);}
+
 
 /* ---------------------------------
    LAYOUT
@@ -482,6 +486,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
