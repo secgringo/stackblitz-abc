@@ -402,6 +402,19 @@ footer a {
   color: var(--detritus-green); /* ✅ all text detritus green */
 }
 
+/* Normalize spacing inside split-section */
+.split-section h2 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+}
+
+.split-section p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+
 @media (max-width: 768px) {
   .split-section {
     flex-direction: column;
