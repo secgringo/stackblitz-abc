@@ -193,6 +193,10 @@ footer a { color: var(--endurance-white); text-decoration: none; margin: 0 0.5re
   border-right: 2px solid rgba(23, 37, 63, 0.2);
 }
 
+.split-left {
+  border-right: 2px solid rgba(23, 37, 63, 0.2);
+}
+
 .split-section h2 { margin: 0 0 0.5rem 0; font-size: 1.5rem; color: var(--detritus-green); }
 .split-section p { margin: 0; color: var(--detritus-green); }
 
