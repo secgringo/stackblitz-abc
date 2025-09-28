@@ -37,6 +37,11 @@
 .text-brisk { color: var(--brisk-blue); }
 .text-white { color: var(--endurance-white); }
 
+.text-detritus { 
+  color: var(--detritus-green); 
+}
+
+
 /* ---------------------------------
    LAYOUT
 ---------------------------------- */
