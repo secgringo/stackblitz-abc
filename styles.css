@@ -187,7 +187,7 @@ footer a {
 
 
 /* ---------------------------------
-   Button Section
+   Search Category Section
 ---------------------------------- */
 .button-section {
   background: var(--endurance-white);
@@ -199,7 +199,7 @@ footer a {
   font-size: 1.5rem;
   font-weight: bold;
   text-align: left;            /* ✅ left justified title */
-  margin-bottom: 0rem;
+  margin-bottom: 1rem;
   color: var(--detritus-green);
 }
 
@@ -531,6 +531,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
