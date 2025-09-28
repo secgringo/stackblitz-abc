@@ -189,11 +189,12 @@ footer a {
    EVENT SECTION
 ---------------------------------- */
 .events-section ul {
-  list-style: disc;
-  margin: 1rem auto;
-  padding: 0 1.5rem;
-  max-width: 600px;
+  text-align: left;         /* left-align list items */
+  margin: 1rem auto;        /* center the block itself */
+  padding-left: 1.5rem;     /* ensure bullets have space */
+  max-width: 600px;         /* keeps it from stretching too wide */
 }
+
 
 /* ---------------------------------
    HOURS TABLE
@@ -423,4 +424,5 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
