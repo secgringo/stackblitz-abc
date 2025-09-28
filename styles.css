@@ -191,9 +191,10 @@ footer a {
 .events-section ul {
   text-align: left;         
   margin: 1rem auto;       
-  padding-left: 1.5rem;     
+  padding-left: .5rem;     
   max-width: 600px;         
   color: var(--detritus-green);
+  list-style-position: inside;
 }
 
 .events-section li {
@@ -429,6 +430,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
