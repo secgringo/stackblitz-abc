@@ -136,7 +136,7 @@ footer a {
 }
 
 /* ---------------------------------
-   BUTTONS
+   Cart Buttons
 ---------------------------------- */
 .btn, .cart-btn {
   background: var(--lime-lift);
@@ -155,9 +155,7 @@ footer a {
   transform: scale(1.05);
 }
 
-/* ---------------------------------
-   CARDS
----------------------------------- */
+/* ------- Cards --------- */
 .card-row {
   display: flex;
   flex-wrap: wrap;
@@ -186,13 +184,11 @@ footer a {
 }
 
 
-/* ---------------------------------
-   Search Category Section
----------------------------------- */
+/* ------ Category Section -------- */
 .button-section {
   background: var(--endurance-white);
   padding: 1.5rem 2rem;
-  margin-top: -3rem;   /* tighten spacing with section above */
+  margin-top: -5rem;   /* tighten spacing with section above */
 }
 
 .button-section .button-title {
@@ -225,11 +221,7 @@ footer a {
   transform: scale(1.05);
 }
 
-
-
-/* ---------------------------------
-   EVENT SECTION
----------------------------------- */
+/* ----- Event Section ------- */
 .events-section ul {
   list-style: none;                 /* remove default bullets */
   margin: 1rem 0 0 0;
@@ -247,41 +239,7 @@ footer a {
    padding-left: 3rem;              /* space for barbell */
 }
 
-/* Custom Barbell Bullet */
-.events-section li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 26px;                      /* wider bar */
-  height: 8px;                      /* thicker bar */
-  background: var(--intensity-indigo);
-  border-radius: 3px;
-  box-shadow: 0 0 6px rgba(35, 67, 189, 0.4); /* indigo glow */
-}
-
-/* Plates on each side */
-.events-section li::after {
-  content: "";
-  position: absolute;
-  left: -12px;                      /* left plate position */
-  top: 50%;
-  transform: translateY(-50%);
-  width: 14px;                      /* larger plates */
-  height: 14px;
-  background: var(--lime-lift);
-  border-radius: 50%;
-  box-shadow: 
-    38px 0 0 var(--lime-lift),      /* right plate */
-    0 0 6px rgba(222, 244, 121, 0.6),  /* glow left plate */
-    38px 0 6px rgba(222, 244, 121, 0.6); /* glow right plate */
-}
-
-
-/* ---------------------------------
-   HOURS TABLE
----------------------------------- */
+/* -----  Hours Table ----- */
 .hours-table {
   width: 80%;
   margin: 0 auto;
@@ -305,9 +263,7 @@ footer a {
 .hours-table tr:nth-child(even) { background: var(--aqua-pulse); }
 .hours-table tr:nth-child(odd) { background: var(--endurance-white); }
 
-/* ---------------------------------
-   PRODUCT GRID (Gallery)
----------------------------------- */
+/* ------ Gallery Product Grid -------- */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -355,9 +311,7 @@ footer a {
   .product-grid { grid-template-columns: 1fr; }
 }
 
-/* ---------------------------------
-   CART MODAL
----------------------------------- */
+/* ------ Cart Modal ------- */
 .cart-modal {
   display: none;
   position: fixed;
@@ -411,9 +365,7 @@ footer a {
   color: var(--endurance-white);
 }
 
-/* ---------------------------------
-   PROMO/PERKS BUTTONS
----------------------------------- */
+/* ----- Promo/Perks Buttons ----- */
 .split-section .btn-container {
   margin-top: 2rem;
   text-align: center;
@@ -436,8 +388,6 @@ footer a {
   background: var(--intensity-indigo);
   transform: scale(1.05);
 }
-
-
 
 
 /* ---------------------------------
@@ -532,6 +482,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
