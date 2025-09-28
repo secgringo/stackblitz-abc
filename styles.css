@@ -363,3 +363,62 @@ footer a {
 .feedback-form button {
   align-self: flex-start;
 }
+
+
+
+
+/* ---------------------------------
+   SPLIT SECTION (Promotions & Perks) – TOP-ALIGNED GRID
+---------------------------------- */
+.split-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;     /* two equal columns */
+  gap: 2rem;
+  padding: 2rem;
+  border-top: 2px solid rgba(23, 37, 63, 0.2);
+  border-bottom: 2px solid rgba(23, 37, 63, 0.2);
+  color: var(--detritus-green);
+  text-align: center;
+  align-items: start;                 /* 🔑 align both cells by their top edge */
+}
+
+.split-left,
+.split-right {
+  display: grid;                      /* 🔑 stack title + text as grid rows */
+  grid-auto-rows: auto;
+  row-gap: 0.5rem;                    /* consistent spacing between h2 and p */
+  align-content: start;               /* 🔑 top-align the stack inside each cell */
+  justify-items: center;              /* keep text centered horizontally */
+  padding: 1rem;
+}
+
+.split-left {
+  border-right: 2px solid rgba(23, 37, 63, 0.2);
+}
+
+/* Normalize internal spacing & color */
+.split-section h2 {
+  margin: 0;                          /* remove default margins */
+  line-height: 1.2;
+  font-size: 1.5rem;
+  color: var(--detritus-green);
+}
+.split-section p {
+  margin: 0;
+  line-height: 1.5;
+  color: var(--detritus-green);
+}
+
+/* Mobile stack */
+@media (max-width: 768px) {
+  .split-section {
+    grid-template-columns: 1fr;
+  }
+  .split-left {
+    border-right: none;
+    border-bottom: 2px solid rgba(23, 37, 63, 0.2);
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+}
+
