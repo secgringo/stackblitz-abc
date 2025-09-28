@@ -409,6 +409,10 @@ footer a {
   color: var(--detritus-green);
 }
 
+/* debug (remove after checking) */
+.split-left, .split-right { outline: 1px dashed rgba(23,37,63,.25); }
+
+
 /* Mobile stack */
 @media (max-width: 768px) {
   .split-section {
