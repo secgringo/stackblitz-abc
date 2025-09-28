@@ -4,36 +4,35 @@
 let cart = [];
 
 // Open and close modal
-const cartModal = document.getElementById("cartModal");
 const viewCartBtn = document.getElementById("viewCartBtn");
+const cartModal = document.getElementById("cartModal");
 const closeCartBtn = document.getElementById("closeCartBtn");
 const checkoutBtn = document.getElementById("checkoutBtn");
 const clearCartBtn = document.getElementById("clearCartBtn");
 const cartItemsList = document.getElementById("cartItems");
 
-// ✅ Open cart modal
-if (viewCartBtn) {
+if (viewCartBtn && cartModal) {
   viewCartBtn.addEventListener("click", () => {
     cartModal.style.display = "flex";
     renderCart();
   });
 }
 
-// ✅ Close cart modal
 if (closeCartBtn) {
   closeCartBtn.addEventListener("click", () => {
     cartModal.style.display = "none";
   });
 }
 
-// ✅ Checkout button
 if (checkoutBtn) {
   checkoutBtn.addEventListener("click", () => {
-    alert("Proceeding to checkout!");
+    alert("Thank you for your purchase!");
+    cart = [];
+    renderCart();
+    cartModal.style.display = "none";
   });
 }
 
-// ✅ Clear cart button
 if (clearCartBtn) {
   clearCartBtn.addEventListener("click", () => {
     cart = [];
@@ -41,17 +40,19 @@ if (clearCartBtn) {
   });
 }
 
-// ✅ Add to cart buttons
-document.querySelectorAll(".add-to-cart").forEach((button) => {
+// Add to Cart buttons
+const addToCartButtons = document.querySelectorAll(".add-to-cart");
+addToCartButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const itemName = button.dataset.item;
-    cart.push(itemName);
+    const item = button.getAttribute("data-item");
+    cart.push(item);
     renderCart();
   });
 });
 
-// ✅ Render cart items
+// Render cart items
 function renderCart() {
+  if (!cartItemsList) return;
   cartItemsList.innerHTML = "";
   if (cart.length === 0) {
     cartItemsList.innerHTML = "<li>Your cart is empty.</li>";
@@ -63,7 +64,7 @@ function renderCart() {
     li.textContent = item;
 
     const removeBtn = document.createElement("button");
-    removeBtn.textContent = "Remove";
+    removeBtn.textContent = "x";
     removeBtn.classList.add("remove-btn");
     removeBtn.addEventListener("click", () => {
       cart.splice(index, 1);
@@ -76,22 +77,30 @@ function renderCart() {
 }
 
 // -----------------------------
+// FEEDBACK FORM CONFIRMATION
+// -----------------------------
+const feedbackForm = document.getElementById("feedbackForm");
+
+if (feedbackForm) {
+  feedbackForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("name").value;
+    alert(`Thank you for your feedback, ${name}!`);
+    feedbackForm.reset();
+  });
+}
+
+// -----------------------------
 // NEWSLETTER SUBSCRIPTION
 // -----------------------------
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("newsletterForm");
-  if (form) {
-    form.addEventListener("submit", function (e) {
-      e.preventDefault(); // prevent actual form submission
-      const emailInput = document.getElementById("newsletter");
-      const userEmail = emailInput.value;
+const newsletterForm = document.getElementById("newsletterForm");
+const newsletterInput = document.getElementById("newsletter");
 
-      // Simple confirmation popup
-      alert(`Thank you for subscribing to our newsletter, ${userEmail}!`);
-
-      // Clear the field
-      emailInput.value = "";
-    });
-  }
-});
-
+if (newsletterForm && newsletterInput) {
+  newsletterForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+    const userEmail = newsletterInput.value;
+    alert(`Thank you for subscribing to our newsletter, ${userEmail}!`);
+    newsletterInput.value = ""; // clear field
+  });
+}
