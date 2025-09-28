@@ -189,48 +189,49 @@ footer a {
    EVENT SECTION
 ---------------------------------- */
 .events-section ul {
-  list-style: none;
+  list-style: none;              /* remove default bullets */
   margin: 1rem 0 0 0;
-  padding-left: 0;     
-  max-width: 600px;         
+  padding-left: 0;
+  max-width: 600px;
   color: var(--detritus-green);
   text-align: left;
 }
 
 .events-section li {
-   margin-bottom: 0.75rem;
-   line-height: 1.6;
-   font-size: 1.2rem;
-   position: relative;
-   padding-left: 2.5rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+  font-size: 1.2rem;
+  position: relative;
+  padding-left: 2.5rem;          /* space for custom bullet */
 }
 
-/* Pure CSS Barbell Bullet */
+/* Bar (Indigo) */
 .events-section li::before {
   content: "";
   position: absolute;
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 18px;                   /* overall width of barbell */
-  height: 6px;                   /* thickness of the bar */
-  background: var(--intensity-indigo); /* bar color */
+  width: 18px;                   /* bar width */
+  height: 6px;                   /* bar thickness */
+  background: var(--intensity-indigo);
   border-radius: 2px;
 }
 
-/* Plates (using box-shadow to duplicate circles) */
+/* Plates (Lime Lift) */
 .events-section li::after {
   content: "";
   position: absolute;
-  left: -6px;                    /* position first plate */
+  left: -6px;                    /* left plate */
   top: 50%;
   transform: translateY(-50%);
   width: 8px;
   height: 8px;
-  background: var(--intensity-indigo);
-  border-radius: 50%;            /* makes it a circle */
-  box-shadow: 22px 0 0 var(--intensity-indigo); /* second plate on right */
+  background: var(--lime-lift);  /* ✅ plates = lime lift */
+  border-radius: 50%;
+  box-shadow: 22px 0 0 var(--lime-lift); /* right plate */
 }
+
 
 /* ---------------------------------
    HOURS TABLE
@@ -456,6 +457,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
