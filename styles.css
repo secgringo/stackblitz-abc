@@ -206,7 +206,7 @@ footer a {
 }
 
 /*  Custom Icon Bullet */
-.evetns-section li::before {
+.events-section li::before {
    content: "🏋️"; 
    position: absolute:
    left: 0;
@@ -385,8 +385,6 @@ footer a {
 }
 
 
-
-
 /* ---------------------------------
    SPLIT SECTION (Promotions & Perks) – TOP-ALIGNED GRID
 ---------------------------------- */
@@ -429,8 +427,6 @@ footer a {
   color: var(--detritus-green);
 }
 
-
-
 /* Mobile stack */
 @media (max-width: 768px) {
   .split-section {
@@ -443,9 +439,3 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
-
-
-
-
-
-
