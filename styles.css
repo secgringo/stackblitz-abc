@@ -199,7 +199,20 @@ footer a {
 
 .events-section li {
    margin-bottom: 0.5rem;
-   line-height: 1.4;
+   line-height: 1.6;
+   font-size: 1.2rem;
+   postion: relative;
+   padding-left: 2rem;
+}
+
+/*  Custom Icon Bullet */
+.evetns-section li::before {
+   content: "🏋️"; 
+   position: absolute:
+   left: 0;
+   top: 0;
+   font-size: 1.2rem;
+   color: var(--intensity-indigo);
 }
 
 /* ---------------------------------
@@ -430,6 +443,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
