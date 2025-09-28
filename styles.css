@@ -191,9 +191,20 @@ footer a {
 ---------------------------------- */
 .button-section {
   background: var(--endurance-white);
-  text-align: center;
-  padding: 1rem 0;         /* 🔹 less vertical padding */
-  margin-top: -1rem;       /* 🔹 pulls section closer to above */
+  padding: 1.5rem 2rem;
+  margin-top: -1rem;   /* tighten spacing with section above */
+}
+
+.button-section .button-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: left;            /* ✅ left justified title */
+  margin-bottom: 1rem;
+  color: var(--detritus-green);
+}
+
+.button-section .button-group {
+  text-align: center;          /* ✅ keep buttons centered */
 }
 
 .button-section .btn-brisk {
@@ -212,6 +223,7 @@ footer a {
   background: var(--intensity-indigo);
   transform: scale(1.05);
 }
+
 
 
 /* ---------------------------------
@@ -519,6 +531,7 @@ footer a {
     padding-bottom: 1.5rem;
   }
 }
+
 
 
 
