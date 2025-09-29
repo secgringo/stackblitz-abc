@@ -98,18 +98,28 @@
     </section>
   </main>
 
-  <!-- ✅ Cart Modal -->
-  <div id="cartModal" class="cart-modal">
-    <div class="modal-content">
-      <h2 class="text-brisk">Your Shopping Cart</h2>
-      <ul id="cartItems"></ul>
-      <div class="cart-actions">
-        <button id="closeCartBtn" class="btn">Close</button>
-        <button id="clearCartBtn" class="btn">Clear Cart</button>
-        <button id="checkoutBtn" class="btn">Checkout</button>
-      </div>
+<!-- ✅ Cart Modal -->
+<div id="cartModal" class="cart-modal">
+  <div class="modal-content">
+    <h2 class="text-brisk">Your Shopping Cart</h2>
+    <ul id="cartItems"></ul>
+    <div class="cart-actions">
+      <button id="closeCartBtn" class="btn">Close</button>
+      <button id="clearCartBtn" class="btn">Clear Cart</button>
+      <button id="checkoutBtn" class="btn">Checkout</button>
     </div>
   </div>
+</div>
+
+<!-- ✅ Checkout Confirmation Modal -->
+<div id="checkoutModal" class="cart-modal" style="display: none;">
+  <div class="modal-content">
+    <h2 class="text-brisk">Order Confirmation</h2>
+    <p>Your order has been received and processed. Thank you!</p>
+    <button id="closeCheckoutModal" class="btn">Close</button>
+  </div>
+</div>
+
 
   <footer>
     <form class="newsletter">
@@ -132,5 +142,6 @@
   </footer>
 </body>
 </html>
+
 
 
