@@ -77,6 +77,34 @@ function renderCart() {
 }
 
 // -----------------------------
+// CHECKOUT CONFIRMATION MODAL
+// -----------------------------
+document.addEventListener("DOMContentLoaded", () => {
+  const checkoutBtn = document.getElementById("checkoutBtn");
+  const checkoutModal = document.getElementById("checkoutModal");
+  const closeCheckoutModal = document.getElementById("closeCheckoutModal");
+  const cartModal = document.getElementById("cartModal");
+
+  if (checkoutBtn && checkoutModal) {
+    checkoutBtn.addEventListener("click", () => {
+      // Close the cart modal first
+      cartModal.style.display = "none";
+      // Show checkout confirmation
+      checkoutModal.style.display = "flex";
+      // Optionally clear the cart here if you want
+      // cart = []; updateCartUI();
+    });
+  }
+
+  if (closeCheckoutModal) {
+    closeCheckoutModal.addEventListener("click", () => {
+      checkoutModal.style.display = "none";
+    });
+  }
+});
+
+
+// -----------------------------
 // FEEDBACK FORM CONFIRMATION
 // -----------------------------
 const feedbackForm = document.getElementById("feedbackForm");
@@ -104,3 +132,4 @@ if (newsletterForm && newsletterInput) {
     newsletterInput.value = ""; // clear field
   });
 }
+
